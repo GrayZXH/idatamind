@@ -16,13 +16,15 @@ Route::get('think', function () {
 Route::get('hello/:name', 'index/hello');
 
 Route::get('login', 'admin/Login/index');
-Route::get('admin/login','admin/Login/index');
 
-Route::get('index', 'admin/Index/index');
+Route::get('', 'admin/Index/index');
 Route::get('day', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
 
+Route::get('users/manage', 'admin/Users/manage');
+
+Route::get('user/:id', 'admin/Users/one');
 Route::post('admin/login/check', 'admin/Login/check');
 
 return [

@@ -1,3 +1,4 @@
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1530971713;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1530969753;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -7,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  {block name="title"}<title>网站标题</title>{/block}
+  <title>用户中心</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -16,16 +17,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
-
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-  {block name="css"}{/block}
-  {block name="jsone"}{/block}
-
+  
+  
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="{:url('admin/Index/index')}" class="logo">
+    <a href="<?php echo url('admin/Index/index'); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>UIN</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -294,7 +293,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </li>
 
 
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>渠道设置</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
@@ -305,18 +304,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    {block name="pageheader"} 
+     
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        title
+        <small>sub title</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
     </section>
-    {/block}
+    
 
     <!-- Main content -->
     <section class="content container-fluid">
@@ -324,7 +319,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
-      {block name="content"} <p>content</p> {/block}
+      
+
+
+
+
+
+
+
+
+ 
 
     </section>
     <!-- /.content -->
@@ -442,7 +446,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-{block name="jstwo"}{/block}
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
 

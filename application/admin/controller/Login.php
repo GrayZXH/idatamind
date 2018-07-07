@@ -25,16 +25,21 @@ class Login extends Controller
             return json($data);
         }
     	$user = User::where('email', $email)->find();
-        $data_passwor=$user->password;
-        if ($data_passwor==$password) {
-            Session::set('name',$email);
-            $jsessionid=get_cookie();
-            Session::set('jsessionid',$jsessionid);
-            $data = array('status' => 1, 'message'=>'登录成功');
-            return json($data);
+        if ($user) {
+            $data_password=$user->password;
+            if ($data_password==$password) {
+                Session::set('name',$email);
+                $jsessionid=get_cookie();
+                Session::set('jsessionid',$jsessionid);
+                $data = array('status' => 1, 'message'=>'登录成功');
+                return json($data);
+            }else{
+                $data = array('status' => 0, 'message'=>'账号或密码不正确，请重新登录');
+                return json($data);
+            }
         }else{
-            $data = array('status' => 0, 'message'=>'登录失败');
-            return json($data);
+            $data = array('status' => 0, 'message'=>'登录失败，用户不存在');
+                return json($data);
         }
     }
 }
