@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531044983;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531044983;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531050163;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -297,6 +297,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

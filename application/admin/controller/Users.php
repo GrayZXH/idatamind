@@ -3,7 +3,7 @@ namespace app\admin\controller;
 use think\Controller;
 use app\common\model\User;
 
-class Users extends Controller
+class Users extends Common
 {
     public function index()
     {	
