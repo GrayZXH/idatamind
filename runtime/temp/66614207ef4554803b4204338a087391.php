@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\index\day.html";i:1531013802;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
+<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531013802;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -309,8 +309,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        昨日数据
-        <small>The Data</small>
+        上月数据
+        <small>Month Data</small>
       </h1>
     </section>
     

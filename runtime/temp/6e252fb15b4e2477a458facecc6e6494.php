@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\users\one.html";i:1530978390;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1530977758;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\users\one.html";i:1531037660;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -531,8 +531,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/static/admin/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
 <script>
   $('#datepicker').datepicker({
+      todayBtn: "linked",
       autoclose: true,
-      language: 'zh-CN'
+      language: 'zh-CN',
+      todayHighlight: true
     })
 </script>
 

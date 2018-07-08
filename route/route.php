@@ -22,7 +22,7 @@ Route::get('day', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
 
-Route::get('users/manage', 'admin/Users/manage');
+Route::get('users', 'admin/Users/manage');
 
 Route::get('user/:id', 'admin/Users/one');
 Route::post('admin/login/check', 'admin/Login/check');

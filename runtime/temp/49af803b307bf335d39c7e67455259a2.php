@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1530971713;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1530969753;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531044983;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -17,6 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
+
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -25,6 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
   
   
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -293,7 +295,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </li>
 
 
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>渠道设置</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
@@ -307,8 +309,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        title
-        <small>sub title</small>
+        用户管理
+        <small>users manage</small>
       </h1>
     </section>
     
@@ -321,7 +323,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
         -------------------------->
       
 
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-primary">
+			<div class="box-body">
+				<div class="col-md-6">
 
+						<div class="box-body">
+							<div class="form-group">
+								<label for="exampleInputEmail1">邮箱/Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputName1">昵称/Nikename</label>
+								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">密码/Password</label>
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+						</div>
+
+				</div>
+				<div class="col-md-6">
+
+						<div class="box-body">
+							<div class="form-group">
+								<label for="exampleInputEmail1">邮箱/Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputName1">昵称/Nikename</label>
+								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">密码/Password</label>
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+						</div>
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary pull-right">提交</button>
+						</div>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -446,6 +494,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
 
