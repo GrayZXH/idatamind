@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531044983;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531050163;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531106179;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531106061;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -18,14 +18,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
 
+  
+<!-- bootstrap-datepicker -->
+<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/select2/dist/css/select2.min.css" />
+
+
+  
+
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-  
-  
+
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -314,7 +320,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <small>users manage</small>
       </h1>
     </section>
-    
+
 
     <!-- Main content -->
     <section class="content container-fluid">
@@ -325,55 +331,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
 
 <div class="row">
-	<div class="col-xs-12">
-		<div class="box box-primary">
-			<div class="box-body">
-				<div class="col-md-6">
+        <!-- left column -->
+        <div class="col-md-3">
+          <!-- general form elements -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">账号密码</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱\Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">密码\Password</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </div>
+              <!-- /.box-body -->
 
-						<div class="box-body">
-							<div class="form-group">
-								<label for="exampleInputEmail1">邮箱/Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputName1">昵称/Nikename</label>
-								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">密码/Password</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-							</div>
-						</div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
 
-				</div>
-				<div class="col-md-6">
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-9">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label>Multiple</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
+                        style="width: 100%;">
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>California</option>
+                  <option>Delaware</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Washington</option>
+                </select>
+              </div>
 
-						<div class="box-body">
-							<div class="form-group">
-								<label for="exampleInputEmail1">邮箱/Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputName1">昵称/Nikename</label>
-								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">密码/Password</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-							</div>
-						</div>
-						<div class="box-footer">
-							<button type="submit" class="btn btn-primary pull-right">提交</button>
-						</div>
-						
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+            </div>
 
-
-
+        </div>
+        <!--/.col (right) -->
+      </div>
 
 
 
@@ -496,10 +506,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
+<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script>
+	$('.select2').select2()
+</script>
+
+
+
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
-
-
 
 
 </body>

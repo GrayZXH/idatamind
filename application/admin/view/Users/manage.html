@@ -1,5 +1,9 @@
 {extend name="base" /}
 {block name="title"}<title>用户中心</title>{/block}
+{block name="css"}
+<!-- bootstrap-datepicker -->
+<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/select2/dist/css/select2.min.css" />
+{/block}
 {block name="pageheader"} 
     <section class="content-header">
       <h1>
@@ -7,62 +11,75 @@
         <small>users manage</small>
       </h1>
     </section>
-    {/block}
+{/block}
 
 {block name="content"}
 
 <div class="row">
-	<div class="col-xs-12">
-		<div class="box box-primary">
-			<div class="box-body">
-				<div class="col-md-6">
+        <!-- left column -->
+        <div class="col-md-3">
+          <!-- general form elements -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">账号密码</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱\Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">密码\Password</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </div>
+              <!-- /.box-body -->
 
-						<div class="box-body">
-							<div class="form-group">
-								<label for="exampleInputEmail1">邮箱/Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputName1">昵称/Nikename</label>
-								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">密码/Password</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-							</div>
-						</div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
 
-				</div>
-				<div class="col-md-6">
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-9">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label>Multiple</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
+                        style="width: 100%;">
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>California</option>
+                  <option>Delaware</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Washington</option>
+                </select>
+              </div>
 
-						<div class="box-body">
-							<div class="form-group">
-								<label for="exampleInputEmail1">邮箱/Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputName1">昵称/Nikename</label>
-								<input type="text" class="form-control" id="exampleInputName1" placeholder="Nikename">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">密码/Password</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-							</div>
-						</div>
-						<div class="box-footer">
-							<button type="submit" class="btn btn-primary pull-right">提交</button>
-						</div>
-						
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+            </div>
 
-
-
+        </div>
+        <!--/.col (right) -->
+      </div>
 
 
 
  {/block}
 
+{block name="jstwo"}
+
+<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script>
+	$('.select2').select2()
+</script>
+
+
+{/block}
