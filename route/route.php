@@ -21,6 +21,7 @@ Route::get('', 'admin/Index/index');
 Route::get('day', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
+Route::get('source', 'admin/Index/source');
 
 Route::get('users', 'admin/Users/manage');
 

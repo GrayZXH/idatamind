@@ -32,6 +32,10 @@ class Index extends Common
     {
         return $this->fetch();
     }
+    public function source()
+    {
+        return $this->fetch();
+    }
     public function hello($name = 'ThinkPHP5')
     {
         return 'hello,' . $name;

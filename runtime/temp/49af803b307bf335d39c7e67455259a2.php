@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531106179;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531106061;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531144180;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531149273;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -252,7 +252,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
          <li class="treeview active">
-          <a href="#"><i class="fa fa-line-chart"></i> <span>昨日数据</span>
+          <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -264,7 +264,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li> 
         <li class="treeview">
-          <a href="#"><i class="fa fa-wikipedia-w"></i> <span>上周数据</span>
+          <a href="#"><i class="fa fa-wikipedia-w"></i> <span>周数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -276,7 +276,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-calendar"></i> <span>上月数据</span>
+          <a href="#"><i class="fa fa-calendar"></i> <span>月数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -300,7 +300,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li>
 
-
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
@@ -343,18 +343,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <form role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">邮箱\Email address</label>
+                  <label for="exampleInputNikename1">用户名</label>
+                  <input type="text" class="form-control" id="exampleInputNikename1" placeholder="Nikename">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">密码\Password</label>
+                  <label for="exampleInputPassword1">密码</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
+                <div class="form-group">
+                  <label>状态</label>
+                  <select class="form-control">
+                    <option>可用</option>
+                    <option>禁用</option>
+                  </select>
+                </div>
               </div>
+              
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary pull-right">提交</button>
+                <button type="submit" class="btn btn-success pull-right">提交</button>
               </div>
             </form>
           </div>
@@ -364,22 +376,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!--/.col (left) -->
         <!-- right column -->
         <div class="col-md-9">
-          <div class="col-md-6">
-              <div class="form-group">
-                <label>Multiple</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
+            <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">渠道管理</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                <label>选取渠道</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"
                         style="width: 100%;">
-                  <option>Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
+                  <option>J1</option>
+                  <option>J2</option>
+                  <option>J3</option>
+                  <option>J4</option>
+                  <option>J5</option>
+                  <option>J6</option>
+                  <option>J7</option>
+                  <option>J8</option>
+                  <option>J9</option>
+                  <option>J10</option>
+                  <option>J11</option>
+                  <option>J12</option>
                 </select>
               </div>
+              </div>
+              <!-- /.box-body -->
 
-            </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+              </div>
+            </form>
+          </div>
+              
 
         </div>
         <!--/.col (right) -->

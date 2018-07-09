@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\index\day.html";i:1531013802;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\index\day.html";i:1530960642;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531141633;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -18,14 +18,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
 
+  
+
+  
+
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-  
-  
+
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -297,6 +300,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -609,8 +613,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
-
-
 
 
 </body>

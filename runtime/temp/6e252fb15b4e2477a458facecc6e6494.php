@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\users\one.html";i:1531037660;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531013802;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\users\one.html";i:1531054801;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531149273;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -18,18 +18,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
 
+  
+<!-- bootstrap-datepicker -->
+<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+
+
+  
+
+
+
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-  
-<!-- bootstrap-datepicker -->
-<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
-
-  
-
 
 
 
@@ -251,7 +254,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
          <li class="treeview active">
-          <a href="#"><i class="fa fa-line-chart"></i> <span>昨日数据</span>
+          <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -263,7 +266,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li> 
         <li class="treeview">
-          <a href="#"><i class="fa fa-wikipedia-w"></i> <span>上周数据</span>
+          <a href="#"><i class="fa fa-wikipedia-w"></i> <span>周数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -275,7 +278,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-calendar"></i> <span>上月数据</span>
+          <a href="#"><i class="fa fa-calendar"></i> <span>月数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -299,9 +302,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li>
 
-
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
+        <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -541,8 +545,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
-
-
 
 
 </body>
