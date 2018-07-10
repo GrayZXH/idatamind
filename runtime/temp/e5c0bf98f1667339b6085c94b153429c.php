@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531148812;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531149273;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531205013;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -330,35 +330,148 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="table-responsive">
   <table class="table table-bordered">
     <tr>
-    	<td colspan="2">成都日客资180709</td>
-	    <td>微博</td>
-	    <td>微信</td>
-	    <td>广点通</td>
-	    <td>百度</td>
-	    <td>XXX</td>
-	    <td>360</td>
-	    <td>搜狗</td>
-	    <td>SSS</td>
-	    <td>dss</td>
-	    <td>adas</td>
+    	<td>渠道</td>
+	    <td>获取</td>
+	    <td>有效</td>
+	    <td>待定</td>
+	    <td>无效</td>
+	    <td>A类</td>
+	    <td>B类</td>
+	    <td>C类</td>
+	    <td>D类</td>
+	    <td>E类</td>
+	    <td>F类</td>
+	    <td>未填</td>
     </tr>
     <tr>
-	    <td>汇总</td>
-	    <td>项目</td>
 	    <td>J1</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J2</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J3</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J4</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J5</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J6</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J7</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J8</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J9</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+	    <td>cell</td>
+  </tr>
+  <tr>
 	    <td>J10</td>
-  </tr>
-  <tr>
 	    <td>cell</td>
-	    <td>花费</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -371,22 +484,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J11</td>
 	    <td>cell</td>
-	    <td>获取</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>有效</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -399,22 +498,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J12</td>
 	    <td>cell</td>
-	    <td>进店</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>成交</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -427,22 +512,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J13</td>
 	    <td>cell</td>
-	    <td>流失</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>有效率</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -455,22 +526,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J14</td>
 	    <td>cell</td>
-	    <td>获取成本</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>有效成本</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -483,22 +540,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J15</td>
 	    <td>cell</td>
-	    <td>成交成本</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>有效到进店</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
@@ -511,50 +554,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>cell</td>
   </tr>
   <tr>
+	    <td>J16</td>
 	    <td>cell</td>
-	    <td>进店到成交</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>有效到成交</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>套总</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>cell</td>
-	    <td>均价</td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
