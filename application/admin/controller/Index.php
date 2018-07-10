@@ -10,12 +10,15 @@ class Index extends Common
     {
         /*$data = array('cjrq_b' => '2018-7-5','cjrq_e'=>'2018-7-5' ,'page'=>'1','pagesize'=>'15');*/
         $cookie=Session::get('jsessionid');
-        $data = array('pageSize'=>'1',
+        $data = array('pageSize'=>'15',
                     'list_cjrq'=>'b=2018-07-06,e=2018-07-06',
                     'page'=>'1',
                     'cookie'=>$cookie);
         $rs=get_data($data);
-        print_r($rs);
+        $rs=$rs['result'];
+        //print_r($rs);
+        $source = array_column($rs, 'source');
+        print_r($source);
         
 
         

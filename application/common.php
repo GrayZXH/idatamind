@@ -96,6 +96,7 @@ function get_data($data){
 	  return "cURL Error #:" . $err;
 	} else {
 	  $result=json_decode($response,true);
- 	  return ($result["total"]);
+ 	  //return ($result["total"]);
+ 	  return ($result);
 	}
 }
