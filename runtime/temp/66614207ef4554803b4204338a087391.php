@@ -1,4 +1,4 @@
-<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531148883;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531149273;}*/ ?>
+<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531302307;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -359,8 +359,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <tr>
 	    <td>cell</td>
 	    <td>花费</td>
-	    <td>cell</td>
-	    <td>cell</td>
+	    <td><?php echo htmlentities($source['j1']); ?></td>
+	    <td><?php echo htmlentities($source['j2']); ?></td>
 	    <td>cell</td>
 	    <td>cell</td>
 	    <td>cell</td>
