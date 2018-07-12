@@ -1,4 +1,4 @@
-<?php /*a:1:{s:56:"E:\www\idatamind\application\admin\view\login\index.html";i:1530891276;}*/ ?>
+<?php /*a:1:{s:56:"E:\www\idatamind\application\admin\view\login\index.html";i:1531405527;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +48,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button class="btn btn-primary btn-block btn-flat" type="button" onclick="login.check()">登录</button>
+          <button class="btn btn-primary btn-block btn-flat" type="submit" onclick="login.check()">登录</button>
         </div>
         <!-- /.col -->
       </div>
