@@ -2,6 +2,7 @@
 namespace app\admin\controller;
 
 use think\Controller;
+use think\facade\Request;
 use think\facade\Session;
 
 class Index extends Common
@@ -26,11 +27,26 @@ class Index extends Common
     }
     public function week()
     {
+        $date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
+
+        $source = array('J1','J2','J3','J4','J5','J6','J7','J8','J9' );
+        $num = count($source);
+        for ($i=0; $i < $num; $i++) { 
+            $data[$i]=array('list_cjrq'=>$date,'list_source'=> $source[$i]);
+            $hq[$i]=get_xs_data($data[$i]);
+        }
+
+        var_dump($hq);
+        //$this->assign('source',$source);
+        //$this->assign('hq',$hq);
+
+
+
+
         return $this->fetch();
     }
     public function month()
     {
-        $cookie=Session::get('jsessionid');
         $data1 = array('list_cjrq'=>'b=2018-06-01,e=2018-06-30',
                        'list_source'=> 'J1');
         $data2 = array('list_cjrq'=>'b=2018-06-01,e=2018-06-30',

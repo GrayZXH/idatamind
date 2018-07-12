@@ -1,0 +1,138 @@
+{extend name="base" /}
+{block name="title"}<title>渠道管理</title>{/block}
+{block name="css"}{/block}
+{block name="jsone"}{/block}
+{block name="pageheader"} 
+<!--     <section class="content-header">
+  <h1>
+    渠道管理
+    <small>source manage</small>
+  </h1>
+</section> -->
+{/block}
+
+{block name="content"}
+
+  <div class="box">
+    <div class="box-header">
+      <h3 class="box-title">渠道列表</h3>
+
+      <div class="box-tools">
+        <div class="input-group input-group-sm" style="width: 50px;">
+          <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#ModalAddChannel">
+            添加渠道
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>渠道代码</th>
+            <th>渠道名称</th>
+            <th>所属店铺</th>
+            <th>所属分组</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>J1</td>
+            <td>微博</td>
+            <td>总店</td>
+            <td>推广组</td>
+            <td>可用</td>
+            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>J1</td>
+            <td>微博</td>
+            <td>总店</td>
+            <td>推广组</td>
+            <td>可用</td>
+            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>J1</td>
+            <td>微博</td>
+            <td>总店</td>
+            <td>推广组</td>
+            <td>禁用</td>
+            <td><button type="button" class="btn btn-success btn-xs">启用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
+          </tr>
+        
+      </tbody></table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+  <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalAddChannel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加渠道</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="idata-form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="channelcode">渠道代码</label>
+                  <input type="text" class="form-control" name="code" placeholder="Enter code">
+                </div>
+                <div class="form-group">
+                  <label for="channelname">渠道名称</label>
+                  <input type="text" class="form-control" name="cname" placeholder="Enter code">
+                </div>
+                <div class="form-group">
+                  <label>所属分组</label>
+                  <select class="form-control" name="cgroup">
+                    <option value="1">推广</option>
+                    <option value="2">其他</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>所属店铺</label>
+                  <select class="form-control" name="store">
+                    <option value="1">总店</option>
+                    <option value="2">眉山</option>
+                    <option value="3">雅安</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>渠道状态</label>
+                  <select class="form-control" name="status">
+                    <option>可用</option>
+                    <option>禁用</option>
+                  </select>
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="form-button-submit">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+ {/block}
+
+{block name="jstwo"}
+<script src="/static/admin/JS/common.js"></script>
+{/block}

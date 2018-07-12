@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531387491;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
+<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\index\week.html";i:1531013802;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>用户中心</title>
+  <title>Index</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -19,9 +19,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
 
   
-<!-- bootstrap-datepicker -->
-<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/select2/dist/css/select2.min.css" />
-
 
   
 
@@ -316,11 +313,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        用户管理
-        <small>users manage</small>
+        上周数据
+        <small>Month Data</small>
       </h1>
     </section>
-
+    
 
     <!-- Main content -->
     <section class="content container-fluid">
@@ -331,97 +328,167 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
 
 <div class="row">
-        <!-- left column -->
-        <div class="col-md-3">
-          <!-- general form elements -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">账号密码</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
-              <div class="box-body">
-                <div class="form-group">
-                  <label for="exampleInputNikename1">用户名</label>
-                  <input type="text" class="form-control" id="exampleInputNikename1" placeholder="Nikename">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">邮箱</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">密码</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group">
-                  <label>状态</label>
-                  <select class="form-control">
-                    <option>可用</option>
-                    <option>禁用</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>分组</label>
-                  <select class="form-control">
-                    <option>分组一</option>
-                    <option>分组二</option>
-                  </select>
-                </div>
-              </div>
-              
-              <!-- /.box-body -->
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-aqua">
+			<div class="inner">
+				<h3>150</h3>
 
-              <div class="box-footer">
-                <button type="submit" class="btn btn-success pull-right">提交</button>
-              </div>
-            </form>
-          </div>
-          <!-- /.box -->
+				<p>套总</p>
+			</div>
+			<div class="icon">
+				<i class="ion ion-bag"></i>
+			</div>
+			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	<!-- ./col -->
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-yellow">
+			<div class="inner">
+				<h3>44</h3>
 
-        </div>
-        <!--/.col (left) -->
-        <!-- right column -->
-        <div class="col-md-9">
-            <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">渠道管理</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
-              <div class="box-body">
-                <div class="form-group">
-                <label>选取渠道</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"
-                        style="width: 100%;">
-                  <option>J1</option>
-                  <option>J2</option>
-                  <option>J3</option>
-                  <option>J4</option>
-                  <option>J5</option>
-                  <option>J6</option>
-                  <option>J7</option>
-                  <option>J8</option>
-                  <option>J9</option>
-                  <option>J10</option>
-                  <option>J11</option>
-                  <option>J12</option>
-                </select>
-              </div>
-              </div>
-              <!-- /.box-body -->
+				<p>花费</p>
+			</div>
+			<div class="icon">
+				<i class="ion ion-person-add"></i>
+			</div>
+			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	<!-- ./col -->
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-red">
+			<div class="inner">
+				<h3>65</h3>
 
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary pull-right">提交</button>
-              </div>
-            </form>
-          </div>
-              
+				<p>成交量</p>
+			</div>
+			<div class="icon">
+				<i class="ion ion-pie-graph"></i>
+			</div>
+			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	<!-- ./col -->
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-green">
+			<div class="inner">
+				<h3>53<sup style="font-size: 20px">%</sup></h3>
 
-        </div>
-        <!--/.col (right) -->
-      </div>
+				<p>ROI</p>
+			</div>
+			<div class="icon">
+				<i class="ion ion-stats-bars"></i>
+			</div>
+			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	<!-- ./col -->
+</div>
+
+<div class="row">
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="info-box bg-aqua">
+			<span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+
+			<div class="info-box-content">
+				<span class="info-box-text">获取</span>
+				<span class="info-box-number">41,410</span>
+
+				<div class="progress">
+					<div class="progress-bar" style="width: 100%"></div>
+				</div>
+				<span class="progress-description">
+					70% Increase in 30 Days
+				</span>
+			</div>
+			<!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	</div>
+	<!-- /.col -->
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="info-box bg-green">
+			<span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
+
+			<div class="info-box-content">
+				<span class="info-box-text">有效</span>
+				<span class="info-box-number">41,410</span>
+
+				<div class="progress">
+					<div class="progress-bar" style="width: 70%"></div>
+				</div>
+				<span class="progress-description">
+					70% Increase in 30 Days
+				</span>
+			</div>
+			<!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	</div>
+	<!-- /.col -->
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="info-box bg-yellow">
+			<span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+
+			<div class="info-box-content">
+				<span class="info-box-text">待定</span>
+				<span class="info-box-number">41,410</span>
+
+				<div class="progress">
+					<div class="progress-bar" style="width: 70%"></div>
+				</div>
+				<span class="progress-description">
+					70% Increase in 30 Days
+				</span>
+			</div>
+			<!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	</div>
+	<!-- /.col -->
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="info-box bg-red">
+			<span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+
+			<div class="info-box-content">
+				<span class="info-box-text">有效率</span>
+				<span class="info-box-number">41,410</span>
+
+				<div class="progress">
+					<div class="progress-bar" style="width: 70%"></div>
+				</div>
+				<span class="progress-description">
+					70% Increase in 30 Days
+				</span>
+			</div>
+			<!-- /.info-box-content -->
+		</div>
+		<!-- /.info-box -->
+	</div>
+	<!-- /.col -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -543,14 +610,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
-<script>
-	$('.select2').select2()
-</script>
-
-
 
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>

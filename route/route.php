@@ -18,12 +18,13 @@ Route::get('hello/:name', 'index/hello');
 Route::get('login', 'admin/Login/index');
 
 Route::get('', 'admin/Index/index');
-Route::get('day', 'admin/Index/day');
+Route::get('today', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
 Route::get('source', 'admin/Index/source');
 
 Route::get('users', 'admin/Users/manage');
+Route::get('channel', 'admin/Channel/index');
 
 Route::get('user/:id', 'admin/Users/one');
 Route::post('admin/login/check', 'admin/Login/check');
