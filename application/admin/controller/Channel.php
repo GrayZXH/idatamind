@@ -3,6 +3,7 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\facade\Request;
+use app\common\model\Channel as modelChannel;
 
 
 class Channel extends Common
@@ -13,7 +14,33 @@ class Channel extends Common
     }
     public function add()
     {	
-        return $this->fetch();
+        $code=Request::post('code');
+        $cname=Request::post('cname');
+        $cgroup=Request::post('cgroup');
+        $store=Request::post('store');
+        $status=Request::post('status');
+        if ($code && $cname && $cgroup && $store && $status) {
+            $channel = modelChannel::create([
+                'code'  =>  $code,
+                'cname' =>  $cname,
+                'cgroup'  =>  $cgroup,
+                'store'  =>  $store,
+                'status'  =>  $status
+            ]);
+
+            $rs=$channel->id; // 获取自增ID
+            if ($rs) {
+                $data = array('status' =>1, 'message'=>'添加成功');
+                return json($data);
+            }else{
+                $data = array('status' =>0, 'message'=>'添加失败');
+                return json($data);
+            }
+        }else{
+            $data = array('status' =>0, 'message'=>'信息填写不全');
+            return json($data);
+        }
+        
     }
     public function edit()
     {	

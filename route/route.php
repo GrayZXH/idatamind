@@ -28,6 +28,7 @@ Route::get('channel', 'admin/Channel/index');
 
 Route::get('user/:id', 'admin/Users/one');
 Route::post('admin/login/check', 'admin/Login/check');
+Route::post('admin/channel/add', 'admin/Channel/add');
 
 return [
 ];

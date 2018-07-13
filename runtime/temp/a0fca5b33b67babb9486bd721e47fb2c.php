@@ -1,4 +1,4 @@
-<?php /*a:1:{s:56:"E:\www\idatamind\application\admin\view\login\index.html";i:1531405527;}*/ ?>
+<?php /*a:1:{s:56:"E:\www\idatamind\application\admin\view\login\index.html";i:1531448883;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,8 +68,8 @@
 
   </div>
   <!-- /.login-box-body -->
-</div>
 <!-- /.login-box -->
+
 <script>
   var url = '/admin/Login/check';
 </script>
