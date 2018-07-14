@@ -4,6 +4,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\facade\Request;
 use think\facade\Session;
+use app\common\model\Channel as modelChannel;
 
 class Index extends Common
 {
@@ -17,19 +18,33 @@ class Index extends Common
         print_r($rs);
         //$source = array_column($rs, 'source');
         //print_r($source);
-        
-
-        
+            
     }
     public function day()
     {
-        return $this->fetch();
+        $date='b='.date("Y-m-d").',e='.date("Y-m-d");
+        // 获取所有渠道代码
+        $source=modelChannel::where('status','可用')->column('code');
+        //print_r($source);
+        foreach ($source as $s) {
+            $data[$s] = array('list_cjrq'=>$date,'list_source'=> "$s");
+            $hq[$s]=get_xs_data($data[$s]);
+        }
+        foreach ($source as $s) {
+            $data[$s] = array('list_cjrq'=>$date,'list_source'=> "$s",'list_status'=>'转为客户');
+            $kh[$s]=get_xs_data($data[$s]);
+        }
+        print_r($hq);
+        echo "<br>";
+        print_r($kh);
+        //return $this->fetch();
     }
     public function week()
     {
         $date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
 
         $source = array('J1','J2','J3','J4','J5','J6','J7','J8','J9' );
+
         $num = count($source);
         for ($i=0; $i < $num; $i++) { 
             $data[$i]=array('list_cjrq'=>$date,'list_source'=> $source[$i]);
@@ -43,7 +58,7 @@ class Index extends Common
 
 
 
-        return $this->fetch();
+        //return $this->fetch();
     }
     public function month()
     {
@@ -58,8 +73,34 @@ class Index extends Common
         $this->assign('source',$source);
         return $this->fetch();
     }
+
     public function source()
     {
+        $source=modelChannel::where('status','可用')->column('code');
+        $date='b='.date("Y-m-d").',e='.date("Y-m-d");
+        $data = array('list_cjrq'=>$date);
+        $kh=get_kh_data($data);
+
+        if ($kh['total']) {
+            $warning='总数据量为：'.$kh['total'].'现在展示的数据不准确，请手动查询';
+        }
+
+        $abc = array();
+        $khabc=$kh['result'];
+        $num = count($khabc);
+        foreach ($source as $v) {
+            for ($i=0; $i < $num; $i++) { 
+                if ($v==$khabc[$i]['source']) {
+                    $abc[$v][$i]=$khabc[$i]['grade'];
+                }
+            }
+            $result[$v]=array_count_values($abc[$v]);
+        }
+
+        $this->assign('result',$result);
+        $this->assign('warning',$warning);
+        //print_r($source);
+        
         return $this->fetch();
     }
     public function hello($name = 'ThinkPHP5')

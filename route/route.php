@@ -16,6 +16,10 @@ Route::get('think', function () {
 Route::get('hello/:name', 'index/hello');
 
 Route::get('login', 'admin/Login/index');
+Route::post('admin/login/check', 'admin/Login/check');
+
+
+Route::get('test', 'admin/Test/index');
 
 Route::get('', 'admin/Index/index');
 Route::get('today', 'admin/Index/day');
@@ -24,11 +28,12 @@ Route::get('month', 'admin/Index/month');
 Route::get('source', 'admin/Index/source');
 
 Route::get('users', 'admin/Users/manage');
-Route::get('channel', 'admin/Channel/index');
-
 Route::get('user/:id', 'admin/Users/one');
-Route::post('admin/login/check', 'admin/Login/check');
+
+
+Route::get('channel', 'admin/Channel/index');
 Route::post('admin/channel/add', 'admin/Channel/add');
+Route::get('admin/channel/delete', 'admin/Channel/delete');
 
 return [
 ];

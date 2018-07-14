@@ -1,4 +1,4 @@
-<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531302307;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
+<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531312076;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -666,7 +666,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="msgAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -677,8 +677,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
         </div>
       </div>
     </div>

@@ -102,7 +102,7 @@ function get_xs_data($data){
 }
 
 function get_kh_data($data){
-	$pageSize='';
+	$pageSize='1000';
 	$list_fl='';
 	$list_dh='';
 	$list_grade='';
@@ -132,7 +132,7 @@ function get_kh_data($data){
 	$type='';
 	$remark='';
 	$list_cjr='';
-	$page='';
+	$page='1';
 	$cookie=Session::get('jsessionid');
 
 	extract($data);
@@ -163,7 +163,8 @@ function get_kh_data($data){
 	if ($err) {
 	  echo "cURL Error #:" . $err;
 	} else {
-	  return ($result["total"]);
+	    $result=json_decode($response,true);
+	    return ($result);
 	}
 
 

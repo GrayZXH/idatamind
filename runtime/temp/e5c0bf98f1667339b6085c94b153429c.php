@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531205013;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531191434;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531582659;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -343,230 +343,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>F类</td>
 	    <td>未填</td>
     </tr>
+	<?php foreach($result as $key=>$vo): ?> 
     <tr>
-	    <td>J1</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J2</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J3</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J4</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J5</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J6</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J7</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J8</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J9</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J10</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J11</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J12</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J13</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J14</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J15</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
-  <tr>
-	    <td>J16</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-	    <td>cell</td>
-  </tr>
+		    <td><?php echo htmlentities($key); ?></td>
+		    <td>cell</td>
+		    <td>cell</td>
+		    <td>cell</td>
+		    <td>cell</td>
+		    <td><?php echo !empty($vo['A类 一个月']) ? htmlentities($vo['A类 一个月']) : 0; ?></td>
+		    <td><?php echo !empty($vo['B类 两个月']) ? htmlentities($vo['B类 两个月']) : 0; ?></td>
+		    <td><?php echo !empty($vo['C类 三个月']) ? htmlentities($vo['C类 三个月']) : 0; ?></td>
+		    <td><?php echo !empty($vo['D类 半年内拍']) ? htmlentities($vo['D类 半年内拍']) : 0; ?></td>
+		    <td><?php echo !empty($vo['E类 一年内拍']) ? htmlentities($vo['E类 一年内拍']) : 0; ?></td>
+		    <td><?php echo !empty($vo['F类 两年内拍']) ? htmlentities($vo['F类 两年内拍']) : 0; ?></td>
+		    <td><?php echo htmlentities($total); ?></td>
+	  	</tr>
+<?php endforeach; if(is_array($result) || $result instanceof \think\Collection || $result instanceof \think\Paginator): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$rs): $mod = ($i % 2 );++$i;endforeach; endif; else: echo "" ;endif; ?>
+ 
   </table>
 </div>
 
@@ -667,7 +460,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
   <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="msgAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -678,8 +471,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
         </div>
       </div>
     </div>

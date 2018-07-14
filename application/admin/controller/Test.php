@@ -1,17 +1,14 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-use app\common\model\User;
+use think\facade\Request;
 
 class Test extends Controller
 {
     public function index()
     {	
-    	$email='rayzxh@163.com';
-    	$test = User::get(['email' => $email]);
-
-    	$this->assign('test',$test);
-        return $this->fetch();
+    	$id=Request::get('id');
+        echo "$id";
     }
     
 }

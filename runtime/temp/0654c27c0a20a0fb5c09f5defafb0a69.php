@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531451715;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531449377;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531566117;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -352,33 +352,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <th>状态</th>
             <th>操作</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>可用</td>
-            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>可用</td>
-            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>禁用</td>
-            <td><button type="button" class="btn btn-success btn-xs">启用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
+          <?php foreach($list as $key=>$vo): ?> 
+              <tr>
+                <td><?php echo htmlentities($vo['id']); ?></td>
+                <td><?php echo htmlentities($vo['code']); ?></td>
+                <td><?php echo htmlentities($vo['cname']); ?></td>
+                <td><?php echo htmlentities($vo['store']); ?></td>
+                <td><?php echo htmlentities($vo['cgroup']); ?></td>
+                <td><?php echo htmlentities($vo['status']); ?></td>
+                <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>
+                    <button type="button" class="btn btn-default btn-xs">编辑</button> -->
+                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/channel/delete?id=">删除</a></button>
+                </td>
+              </tr>
+          <?php endforeach; ?>
+          
+
         
       </tbody></table>
     </div>
@@ -410,16 +399,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>所属分组</label>
                   <select class="form-control" name="cgroup">
-                    <option value="1">推广</option>
-                    <option value="2">其他</option>
+                    <option>推广</option>
+                    <option>其他</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>所属店铺</label>
                   <select class="form-control" name="store">
-                    <option value="1">总店</option>
-                    <option value="2">眉山</option>
-                    <option value="3">雅安</option>
+                    <option>总店</option>
+                    <option>眉山</option>
+                    <option>雅安</option>
                   </select>
                 </div>
                 <div class="form-group">

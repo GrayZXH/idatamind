@@ -10,7 +10,11 @@ class Channel extends Common
 {
     public function index()
     {	
-        return $this->fetch();
+        $list = modelChannel::all();
+        $this->assign('list',$list);
+
+        print_r($list);
+        //return $this->fetch();
     }
     public function add()
     {	
@@ -48,6 +52,19 @@ class Channel extends Common
     }
     public function delete()
     {	
-        return $this->fetch();
+        $id=Request::get('id');
+        if ($id) {
+           $rs=modelChannel::where('id','=',$id)->delete();
+           if ($rs) {
+                $data = array('status' =>1, 'message'=>'删除成功');
+                return json($data);
+            }else{
+                $data = array('status' =>0, 'message'=>'删除失败');
+                return json($data);
+            }
+        }else{
+            $data = array('status' =>0, 'message'=>'发生错误');
+            return json($data);
+        }
     }
 }

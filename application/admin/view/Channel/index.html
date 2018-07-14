@@ -38,33 +38,22 @@
             <th>状态</th>
             <th>操作</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>可用</td>
-            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>可用</td>
-            <td><button type="button" class="btn btn-warning btn-xs">禁用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>J1</td>
-            <td>微博</td>
-            <td>总店</td>
-            <td>推广组</td>
-            <td>禁用</td>
-            <td><button type="button" class="btn btn-success btn-xs">启用</button> <button type="button" class="btn btn-default btn-xs">编辑</button> <button type="button" class="btn btn-danger btn-xs">删除</button></td>
-          </tr>
+          {foreach $list as $key=>$vo } 
+              <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.code}</td>
+                <td>{$vo.cname}</td>
+                <td>{$vo.store}</td>
+                <td>{$vo.cgroup}</td>
+                <td>{$vo.status}</td>
+                <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>
+                    <button type="button" class="btn btn-default btn-xs">编辑</button> -->
+                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/channel/delete?id=">删除</a></button>
+                </td>
+              </tr>
+          {/foreach}
+          
+
         
       </tbody></table>
     </div>
@@ -96,16 +85,16 @@
                 <div class="form-group">
                   <label>所属分组</label>
                   <select class="form-control" name="cgroup">
-                    <option value="1">推广</option>
-                    <option value="2">其他</option>
+                    <option>推广</option>
+                    <option>其他</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>所属店铺</label>
                   <select class="form-control" name="store">
-                    <option value="1">总店</option>
-                    <option value="2">眉山</option>
-                    <option value="3">雅安</option>
+                    <option>总店</option>
+                    <option>眉山</option>
+                    <option>雅安</option>
                   </select>
                 </div>
                 <div class="form-group">
