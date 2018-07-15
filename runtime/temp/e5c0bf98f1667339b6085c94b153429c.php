@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531582659;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531651306;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -17,18 +17,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
-
-  
-
-  
-
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
+  
+ <style>
+    table{border-collapse:collapse;}
+	table,th,tr,td{border: 1px solid black;}
+	.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 1px solid black;}
+ </style>
 
+  
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -328,7 +330,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
 
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table table-hover">
     <tr>
     	<td>渠道</td>
 	    <td>获取</td>
@@ -343,12 +345,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>F类</td>
 	    <td>未填</td>
     </tr>
-	<?php foreach($result as $key=>$vo): ?> 
-    <tr>
+	<?php foreach($result as $key=>$vo): ?>  
+	    <tr>
 		    <td><?php echo htmlentities($key); ?></td>
 		    <td>cell</td>
-		    <td>cell</td>
-		    <td>cell</td>
+		    <td><?php echo !empty($sum[$key]) ? "$sum[$key]"  :  '0'; ?></td>
+		    <td></td>
 		    <td>cell</td>
 		    <td><?php echo !empty($vo['A类 一个月']) ? htmlentities($vo['A类 一个月']) : 0; ?></td>
 		    <td><?php echo !empty($vo['B类 两个月']) ? htmlentities($vo['B类 两个月']) : 0; ?></td>
@@ -356,9 +358,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		    <td><?php echo !empty($vo['D类 半年内拍']) ? htmlentities($vo['D类 半年内拍']) : 0; ?></td>
 		    <td><?php echo !empty($vo['E类 一年内拍']) ? htmlentities($vo['E类 一年内拍']) : 0; ?></td>
 		    <td><?php echo !empty($vo['F类 两年内拍']) ? htmlentities($vo['F类 两年内拍']) : 0; ?></td>
-		    <td><?php echo htmlentities($total); ?></td>
+		    <td><?php echo (isset($sum[$key])?$sum[$key]:0) ?></td>
 	  	</tr>
-<?php endforeach; if(is_array($result) || $result instanceof \think\Collection || $result instanceof \think\Paginator): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$rs): $mod = ($i % 2 );++$i;endforeach; endif; else: echo "" ;endif; ?>
+	<?php endforeach; ?>
+	    
  
   </table>
 </div>

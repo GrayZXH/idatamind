@@ -1,4 +1,4 @@
-<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531312076;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
+<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1531302307;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -17,18 +17,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
-
-  
-
-  
-
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-
+  
+  
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

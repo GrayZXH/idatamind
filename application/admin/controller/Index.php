@@ -86,21 +86,30 @@ class Index extends Common
         }
 
         $abc = array();
+        $sum = array();
         $khabc=$kh['result'];
         $num = count($khabc);
         foreach ($source as $v) {
             for ($i=0; $i < $num; $i++) { 
                 if ($v==$khabc[$i]['source']) {
-                    $abc[$v][$i]=$khabc[$i]['grade'];
+                    if (isset($sum[$v])) {
+                        $sum[$v]+=1;
+                    }else{
+                        $sum[$v]=1;
+                    }
+                    $abc[$v][$i]=$khabc[$i]['grade']?$khabc[$i]['grade']:'未填';
+                }else{
+                    $abc[$v][$i]='';
                 }
             }
             $result[$v]=array_count_values($abc[$v]);
         }
-
+        //print_r($sum);
+        //echo "<br>";
+        //print_r($result);
+        $this->assign('sum',$sum);
         $this->assign('result',$result);
         $this->assign('warning',$warning);
-        //print_r($source);
-        
         return $this->fetch();
     }
     public function hello($name = 'ThinkPHP5')

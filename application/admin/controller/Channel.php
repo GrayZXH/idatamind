@@ -13,8 +13,8 @@ class Channel extends Common
         $list = modelChannel::all();
         $this->assign('list',$list);
 
-        print_r($list);
-        //return $this->fetch();
+        //print_r($list);
+        return $this->fetch();
     }
     public function add()
     {	
@@ -25,11 +25,11 @@ class Channel extends Common
         $status=Request::post('status');
         if ($code && $cname && $cgroup && $store && $status) {
             $channel = modelChannel::create([
-                'code'  =>  $code,
-                'cname' =>  $cname,
-                'cgroup'  =>  $cgroup,
-                'store'  =>  $store,
-                'status'  =>  $status
+                'code'  =>  "$code",
+                'cname' =>  "$cname",
+                'cgroup'  =>  "$cgroup",
+                'store'  =>  "$store",
+                'status'  =>  "$status"
             ]);
 
             $rs=$channel->id; // 获取自增ID

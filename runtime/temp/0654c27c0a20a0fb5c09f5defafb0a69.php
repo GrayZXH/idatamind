@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531566117;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531639482;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -17,18 +17,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
-
-  
-
-  
-
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-
+  
+  
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -362,7 +358,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <td><?php echo htmlentities($vo['status']); ?></td>
                 <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>
                     <button type="button" class="btn btn-default btn-xs">编辑</button> -->
-                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/channel/delete?id=">删除</a></button>
+                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/channel/delete?id=<?php echo htmlentities($vo['id']); ?>">删除</a></button>
                 </td>
               </tr>
           <?php endforeach; ?>
@@ -399,14 +395,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>所属分组</label>
                   <select class="form-control" name="cgroup">
-                    <option>推广</option>
+                    <option selected="selected">推广</option>
                     <option>其他</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>所属店铺</label>
                   <select class="form-control" name="store">
-                    <option>总店</option>
+                    <option selected="selected">总店</option>
                     <option>眉山</option>
                     <option>雅安</option>
                   </select>
@@ -414,7 +410,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>渠道状态</label>
                   <select class="form-control" name="status">
-                    <option>可用</option>
+                    <option selected="selected">可用</option>
                     <option>禁用</option>
                   </select>
                 </div>

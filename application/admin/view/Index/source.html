@@ -1,5 +1,14 @@
 {extend name="base" /}
 {block name="title"}<title>source</title>{/block}
+{block name="css"}
+ <style>
+    table{border-collapse:collapse;}
+	table,th,tr,td{border: 1px solid black;}
+	.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 1px solid black;}
+ </style>
+{/block}
+
+
 {block name="pageheader"} 
     <section class="content-header">
       <h1>
@@ -12,7 +21,7 @@
 {block name="content"}
 
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table table-hover">
     <tr>
     	<td>渠道</td>
 	    <td>获取</td>
@@ -27,11 +36,11 @@
 	    <td>F类</td>
 	    <td>未填</td>
     </tr>
-	{foreach $result as $key=>$vo} 
-    <tr>
+	{foreach $result as $key=>$vo}  
+	    <tr>
 		    <td>{$key}</td>
 		    <td>cell</td>
-		    <td>cell</td>
+		    <td>{$sum[$key]? "$sum[$key]" : '0'}</td>
 		    <td>cell</td>
 		    <td>cell</td>
 		    <td>{$vo['A类 一个月']?$vo['A类 一个月']:0}</td>
@@ -40,12 +49,10 @@
 		    <td>{$vo['D类 半年内拍']?$vo['D类 半年内拍']:0}</td>
 		    <td>{$vo['E类 一年内拍']?$vo['E类 一年内拍']:0}</td>
 		    <td>{$vo['F类 两年内拍']?$vo['F类 两年内拍']:0}</td>
-		    <td>cell</td>
+		    <td>{php}echo (isset($sum[$key])?$sum[$key]:0){/php}</td>
 	  	</tr>
-{/foreach}
-	    {volist name="result" id="rs"  }
-		
-	{/volist}
+	{/foreach}
+	    
  
   </table>
 </div>
