@@ -1,16 +1,16 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-use app\common\model\User;
+use app\common\model\User as modelUser;
 
-class Users extends Common
+class User extends Common
 {
-    public function index()
+    public function users()
     {	
         return $this->fetch();
     }
 
-    public function manage()
+    public function edit()
     {
         return $this->fetch();
     }

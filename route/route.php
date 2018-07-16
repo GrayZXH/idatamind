@@ -27,8 +27,9 @@ Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
 Route::get('source', 'admin/Index/source');
 
-Route::get('users', 'admin/Users/manage');
-Route::get('user/:id', 'admin/Users/one');
+Route::get('users', 'admin/User/users');
+Route::get('user/edit/:id', 'admin/User/edit');
+Route::get('user/:id', 'admin/User/one');
 
 
 Route::get('channel', 'admin/Channel/index');

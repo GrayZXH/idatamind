@@ -90,7 +90,7 @@ class Index extends Common
 
 
         //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
-        $datakh = array('list_cjrq'=>$date);
+        $datakh = array('list_cjrq'=>$date,'pageSize'=>1000);
         $kh=get_kh_data($datakh);
 
         if ($kh['total']) {
@@ -116,7 +116,7 @@ class Index extends Common
             }
             $result[$v]=array_count_values($abc[$v]);
         }
-        //print_r($sum);
+        //print_r($kh);
         //echo "<br>";
         //print_r($result);
         $this->assign('hq',$hq);

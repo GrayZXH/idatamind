@@ -1,0 +1,109 @@
+{extend name="base" /}
+{block name="title"}<title>用户列表</title>{/block}
+{block name="css"}
+
+{/block}
+{block name="pageheader"} 
+    <section class="content-header">
+      <h1>
+        用户列表
+        <small>users manage</small>
+      </h1>
+    </section>
+{/block}
+
+{block name="content"}
+
+  <div class="box">
+    <div class="box-header">
+      <h3 class="box-title">渠道列表</h3>
+
+      <div class="box-tools">
+        <div class="input-group input-group-sm" style="width: 50px;">
+          <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#ModalAddUser">
+            添加用户
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>权限</th>
+            <th>店铺</th>
+            <th>分组</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr> 
+              <tr>
+                <td>id</td>
+                <td>username</td>
+                <td>权限</td>
+                <td>store</td>
+                <td>group</td>
+                <td>status</td>
+                <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>-->
+                    <button type="button" class="btn btn-default btn-xs">编辑</button> 
+                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/user/delete?id=">删除</a></button>
+                </td>
+              </tr>
+          
+
+        
+      </tbody></table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="ModalAddUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="idata-form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="username">用户名</label>
+                  <input type="text" class="form-control" name="username" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                  <label for="password">密码</label>
+                  <input type="text" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label>权限</label>
+                  <select class="form-control" name="authority">
+                    <option selected="selected">普通用户</option>
+                    <option>管理员</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>状态</label>
+                  <select class="form-control" name="status">
+                    <option selected="selected">可用</option>
+                    <option>禁用</option>
+                  </select>
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick="channel.add()">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ {/block}
+

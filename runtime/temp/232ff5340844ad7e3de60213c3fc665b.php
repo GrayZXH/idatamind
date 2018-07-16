@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531747019;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531747019;}*/ ?>
+<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\user\users.html";i:1531754099;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531747019;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>用户中心</title>
+  <title>用户列表</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -313,7 +313,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        用户管理
+        用户列表
         <small>users manage</small>
       </h1>
     </section>
@@ -327,98 +327,94 @@ scratch. This page gets rid of all links and provides the needed markup only.
         -------------------------->
       
 
-<div class="row">
-        <!-- left column -->
-        <div class="col-md-3">
-          <!-- general form elements -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">账号密码</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+  <div class="box">
+    <div class="box-header">
+      <h3 class="box-title">渠道列表</h3>
+
+      <div class="box-tools">
+        <div class="input-group input-group-sm" style="width: 50px;">
+          <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#ModalAddUser">
+            添加用户
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>权限</th>
+            <th>店铺</th>
+            <th>分组</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr> 
+              <tr>
+                <td>id</td>
+                <td>username</td>
+                <td>权限</td>
+                <td>store</td>
+                <td>group</td>
+                <td>status</td>
+                <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>-->
+                    <button type="button" class="btn btn-default btn-xs">编辑</button> 
+                    <button type="button" class="btn btn-danger btn-xs"><a href="admin/user/delete?id=">删除</a></button>
+                </td>
+              </tr>
+          
+
+        
+      </tbody></table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="ModalAddUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="idata-form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputNikename1">用户名</label>
-                  <input type="text" class="form-control" id="exampleInputNikename1" placeholder="Nikename">
+                  <label for="username">用户名</label>
+                  <input type="text" class="form-control" name="username" placeholder="User Name">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">邮箱</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <label for="password">密码</label>
+                  <input type="text" class="form-control" name="password" placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">密码</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label>权限</label>
+                  <select class="form-control" name="authority">
+                    <option selected="selected">普通用户</option>
+                    <option>管理员</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>状态</label>
-                  <select class="form-control">
-                    <option>可用</option>
+                  <select class="form-control" name="status">
+                    <option selected="selected">可用</option>
                     <option>禁用</option>
                   </select>
                 </div>
-                <div class="form-group">
-                  <label>分组</label>
-                  <select class="form-control">
-                    <option>分组一</option>
-                    <option>分组二</option>
-                  </select>
-                </div>
-              </div>
-              
-              <!-- /.box-body -->
-
-              <div class="box-footer">
-                <button type="submit" class="btn btn-success pull-right">提交</button>
-              </div>
-            </form>
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!--/.col (left) -->
-        <!-- right column -->
-        <div class="col-md-9">
-            <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">渠道管理</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
-              <div class="box-body">
-                <div class="form-group">
-                <label>选取渠道</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"
-                        style="width: 100%;">
-                  <option>J1</option>
-                  <option>J2</option>
-                  <option>J3</option>
-                  <option>J4</option>
-                  <option>J5</option>
-                  <option>J6</option>
-                  <option>J7</option>
-                  <option>J8</option>
-                  <option>J9</option>
-                  <option>J10</option>
-                  <option>J11</option>
-                  <option>J12</option>
-                </select>
-              </div>
               </div>
               <!-- /.box-body -->
-
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary pull-right">提交</button>
-              </div>
             </form>
-          </div>
-              
-
-        </div>
-        <!--/.col (right) -->
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" onclick="channel.add()">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -539,14 +535,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
-<script>
-	$('.select2').select2()
-</script>
-
-
 
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
