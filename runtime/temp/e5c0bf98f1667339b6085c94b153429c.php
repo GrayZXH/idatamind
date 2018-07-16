@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531651306;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531710906;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -348,17 +348,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<?php foreach($result as $key=>$vo): ?>  
 	    <tr>
 		    <td><?php echo htmlentities($key); ?></td>
-		    <td>cell</td>
-		    <td><?php echo !empty($sum[$key]) ? "$sum[$key]"  :  '0'; ?></td>
-		    <td></td>
-		    <td>cell</td>
-		    <td><?php echo !empty($vo['A类 一个月']) ? htmlentities($vo['A类 一个月']) : 0; ?></td>
-		    <td><?php echo !empty($vo['B类 两个月']) ? htmlentities($vo['B类 两个月']) : 0; ?></td>
-		    <td><?php echo !empty($vo['C类 三个月']) ? htmlentities($vo['C类 三个月']) : 0; ?></td>
-		    <td><?php echo !empty($vo['D类 半年内拍']) ? htmlentities($vo['D类 半年内拍']) : 0; ?></td>
-		    <td><?php echo !empty($vo['E类 一年内拍']) ? htmlentities($vo['E类 一年内拍']) : 0; ?></td>
-		    <td><?php echo !empty($vo['F类 两年内拍']) ? htmlentities($vo['F类 两年内拍']) : 0; ?></td>
-		    <td><?php echo (isset($sum[$key])?$sum[$key]:0) ?></td>
+		    <td><?php echo htmlentities($hq[$key]); ?></td>
+		    <td><?php echo $yx=(isset($sum[$key])?$sum[$key]:0) ?></td>
+		    <td><?php echo $dd=($hq[$key]-$yx-$wx[$key]) ?></td>
+		    <td><?php echo htmlentities($wx[$key]); ?></td>
+		    <td><?php echo $a=(isset($vo['A类 一个月'])?$vo['A类 一个月']:0) ?></td>
+		    <td><?php echo $b=(isset($vo['B类 两个月'])?$vo['B类 两个月']:0) ?></td>
+		    <td><?php echo $c=(isset($vo['C类 三个月'])?$vo['C类 三个月']:0) ?></td>
+		    <td><?php echo $d=(isset($vo['D类 半年内拍'])?$vo['D类 半年内拍']:0) ?></td>
+		    <td><?php echo $e=(isset($vo['E类 一年内拍'])?$vo['E类 一年内拍']:0) ?></td>
+		    <td><?php echo $f=(isset($vo['F类 两年内拍'])?$vo['F类 两年内拍']:0) ?></td>
+		    <td><?php echo $wt=$yx-$a-$b-$c-$d-$e-$f ?></td>
 	  	</tr>
 	<?php endforeach; ?>
 	    

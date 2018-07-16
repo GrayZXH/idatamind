@@ -1,3 +1,4 @@
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\users\manage.html";i:1531716438;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531716454;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -7,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  {block name="title"}<title>网站标题</title>{/block}
+  <title>用户中心</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -24,8 +25,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-  {block name="css"}{/block}
-  {block name="jsone"}{/block}
+  
+
+
+  
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="{:url('admin/Index/index')}" class="logo">
+    <a href="<?php echo url('admin/Index/index'); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>UIN</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -307,18 +310,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    {block name="pageheader"} 
+     
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        用户管理
+        <small>users manage</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
     </section>
-    {/block}
+
 
     <!-- Main content -->
     <section class="content container-fluid">
@@ -326,7 +325,104 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
-      {block name="content"} <p>content</p> {/block}
+      
+
+<div class="row">
+        <!-- left column -->
+        <div class="col-md-3">
+          <!-- general form elements -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">账号密码</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputNikename1">用户名</label>
+                  <input type="text" class="form-control" id="exampleInputNikename1" placeholder="Nikename">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">密码</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label>状态</label>
+                  <select class="form-control">
+                    <option>可用</option>
+                    <option>禁用</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>分组</label>
+                  <select class="form-control">
+                    <option>分组一</option>
+                    <option>分组二</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-success pull-right">提交</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-9">
+            <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">渠道管理</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                <label>选取渠道</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"
+                        style="width: 100%;">
+                  <option>J1</option>
+                  <option>J2</option>
+                  <option>J3</option>
+                  <option>J4</option>
+                  <option>J5</option>
+                  <option>J6</option>
+                  <option>J7</option>
+                  <option>J8</option>
+                  <option>J9</option>
+                  <option>J10</option>
+                  <option>J11</option>
+                  <option>J12</option>
+                </select>
+              </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+              </div>
+            </form>
+          </div>
+              
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+
+
+
+ 
 
     </section>
     <!-- /.content -->
@@ -443,7 +539,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-{block name="jstwo"}{/block}
+
+
+<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script>
+	$('.select2').select2()
+</script>
+
+
+
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>
 

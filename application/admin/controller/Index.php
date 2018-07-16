@@ -75,11 +75,23 @@ class Index extends Common
     }
 
     public function source()
-    {
+    {   
+        $date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
         $source=modelChannel::where('status','可用')->column('code');
-        $date='b='.date("Y-m-d").',e='.date("Y-m-d");
-        $data = array('list_cjrq'=>$date);
-        $kh=get_kh_data($data);
+        
+        foreach ($source as $qd) {
+            $datahq = array('list_cjrq' => $date, 'list_source'=> $qd);
+            $datawx = array('list_cjrq' => $date, 'list_source'=> $qd, 'list_status'=>"无效");
+            $hq[$qd]=get_xs_data($datahq);
+            $wx[$qd]=get_xs_data($datawx);
+        }
+
+
+
+
+        //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
+        $datakh = array('list_cjrq'=>$date);
+        $kh=get_kh_data($datakh);
 
         if ($kh['total']) {
             $warning='总数据量为：'.$kh['total'].'现在展示的数据不准确，请手动查询';
@@ -107,6 +119,8 @@ class Index extends Common
         //print_r($sum);
         //echo "<br>";
         //print_r($result);
+        $this->assign('hq',$hq);
+        $this->assign('wx',$wx);
         $this->assign('sum',$sum);
         $this->assign('result',$result);
         $this->assign('warning',$warning);

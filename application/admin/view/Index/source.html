@@ -39,17 +39,17 @@
 	{foreach $result as $key=>$vo}  
 	    <tr>
 		    <td>{$key}</td>
-		    <td>cell</td>
-		    <td>{$sum[$key]? "$sum[$key]" : '0'}</td>
-		    <td>cell</td>
-		    <td>cell</td>
-		    <td>{$vo['A类 一个月']?$vo['A类 一个月']:0}</td>
-		    <td>{$vo['B类 两个月']?$vo['B类 两个月']:0}</td>
-		    <td>{$vo['C类 三个月']?$vo['C类 三个月']:0}</td>
-		    <td>{$vo['D类 半年内拍']?$vo['D类 半年内拍']:0}</td>
-		    <td>{$vo['E类 一年内拍']?$vo['E类 一年内拍']:0}</td>
-		    <td>{$vo['F类 两年内拍']?$vo['F类 两年内拍']:0}</td>
-		    <td>{php}echo (isset($sum[$key])?$sum[$key]:0){/php}</td>
+		    <td>{$hq[$key]}</td>
+		    <td>{php}echo $yx=(isset($sum[$key])?$sum[$key]:0){/php}</td>
+		    <td>{php}echo $dd=($hq[$key]-$yx-$wx[$key]){/php}</td>
+		    <td>{$wx[$key]}</td>
+		    <td>{php}echo $a=(isset($vo['A类 一个月'])?$vo['A类 一个月']:0){/php}</td>
+		    <td>{php}echo $b=(isset($vo['B类 两个月'])?$vo['B类 两个月']:0){/php}</td>
+		    <td>{php}echo $c=(isset($vo['C类 三个月'])?$vo['C类 三个月']:0){/php}</td>
+		    <td>{php}echo $d=(isset($vo['D类 半年内拍'])?$vo['D类 半年内拍']:0){/php}</td>
+		    <td>{php}echo $e=(isset($vo['E类 一年内拍'])?$vo['E类 一年内拍']:0){/php}</td>
+		    <td>{php}echo $f=(isset($vo['F类 两年内拍'])?$vo['F类 两年内拍']:0){/php}</td>
+		    <td>{php}echo $wt=$yx-$a-$b-$c-$d-$e-$f{/php}</td>
 	  	</tr>
 	{/foreach}
 	    

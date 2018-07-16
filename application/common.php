@@ -102,7 +102,7 @@ function get_xs_data($data){
 }
 
 function get_kh_data($data){
-	$pageSize='1000';
+	$pageSize='1';
 	$list_fl='';
 	$list_dh='';
 	$list_grade='';
