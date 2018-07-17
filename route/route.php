@@ -27,9 +27,10 @@ Route::get('week', 'admin/Index/week');
 Route::get('month', 'admin/Index/month');
 Route::get('source', 'admin/Index/source');
 
-Route::get('users', 'admin/User/users');
-Route::get('user/edit/:id', 'admin/User/edit');
-Route::get('user/:id', 'admin/User/one');
+Route::get('users', 'admin/User/users');//用户列表
+Route::get('user/edit/:id', 'admin/User/edit');//编辑用户信息
+Route::get('user/:id', 'admin/User/one');//用户个人中心
+Route::post('admin/User/add', 'admin/User/add');//添加用户
 
 
 Route::get('channel', 'admin/Channel/index');

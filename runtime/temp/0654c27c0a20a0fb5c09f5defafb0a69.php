@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531639482;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531641383;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531804186;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531814411;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -17,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
+  <!-- select2 -->
+  <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/select2/dist/css/select2.min.css" />
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -385,11 +387,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <form role="form" id="idata-form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="channelcode">渠道代码</label>
+                  <label for="code">渠道代码</label>
                   <input type="text" class="form-control" name="code" placeholder="Enter code">
                 </div>
                 <div class="form-group">
-                  <label for="channelname">渠道名称</label>
+                  <label for="cname">渠道名称</label>
                   <input type="text" class="form-control" name="cname" placeholder="Enter code">
                 </div>
                 <div class="form-group">
@@ -533,7 +535,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-primary" id="#confirm" data-dismiss="modal">确认</button>
         </div>
       </div>
     </div>

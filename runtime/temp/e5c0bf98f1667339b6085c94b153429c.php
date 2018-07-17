@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531747019;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531747019;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531809160;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531814411;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -31,6 +31,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	table,th,tr,td{border: 1px solid black;}
 	.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 1px solid black;}
  </style>
+ <!-- bootstrap-datepicker -->
+<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
 
   
 
@@ -318,9 +320,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <section class="content-header">
       <h1>
         日客资报表
-        <small>source report</small>
+        <small><?php echo htmlentities($day); ?></small>
       </h1>
+      <ol class="breadcrumb">
+        <form class="form-inline" action="" method="get">
+		  <div class="form-group">
+		    <input type="text" name="day" class="form-control input-sm" id="datepicker" data-date-end-date="0d">
+		  </div>
+		  <button type="submit" class="btn btn-default btn-sm">查询</button>
+		</form>
+      </ol>
     </section>
+
     
 
     <!-- Main content -->
@@ -371,7 +382,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
- 
 
     </section>
     <!-- /.content -->
@@ -476,7 +486,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-primary" id="#confirm" data-dismiss="modal">确认</button>
         </div>
       </div>
     </div>
@@ -488,6 +498,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- bootstrap-datepicker -->
+<script src="/static/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="/static/admin/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
+<script>
+  $('#datepicker').datepicker({
+      todayBtn: "linked",
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      language: 'zh-CN',
+      todayHighlight: true
+    })
+</script>
+
 
 <!-- AdminLTE App -->
 <script src="/static/admin/dist/js/adminlte.min.js"></script>

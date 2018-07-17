@@ -76,7 +76,25 @@ class Index extends Common
 
     public function source()
     {   
-        $date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
+        //$date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
+        $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
+        $day=Request::get('day',date("Y-m-d"));
+        $area=Request::get('area','cd');
+        switch ($area) {
+            case 'cd':
+                $source=modelChannel::where('status','可用')->column('code');
+                break;
+            case 'ms':
+                $source=modelChannel::where('status','可用')->column('code');
+                break;
+            case 'ya':
+                $source=modelChannel::where('status','可用')->column('code');
+                break;
+            default:
+                $source=modelChannel::where('status','可用')->column('code');
+                break;
+        }
+
         $source=modelChannel::where('status','可用')->column('code');
         
         foreach ($source as $qd) {
@@ -85,9 +103,6 @@ class Index extends Common
             $hq[$qd]=get_xs_data($datahq);
             $wx[$qd]=get_xs_data($datawx);
         }
-
-
-
 
         //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
         $datakh = array('list_cjrq'=>$date,'pageSize'=>1000);
@@ -119,6 +134,7 @@ class Index extends Common
         //print_r($kh);
         //echo "<br>";
         //print_r($result);
+        $this->assign('day',$day);
         $this->assign('hq',$hq);
         $this->assign('wx',$wx);
         $this->assign('sum',$sum);

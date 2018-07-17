@@ -11,8 +11,9 @@ class Channel extends Common
     public function index()
     {	
         $list = modelChannel::all();
-        $this->assign('list',$list);
-
+        if ($list) {
+            $this->assign('list',$list);
+        }
         //print_r($list);
         return $this->fetch();
     }
