@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531804186;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531814411;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531903029;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531908329;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -294,6 +294,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="#">眉山</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-users"></i> <span>渠道管理</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=cd">成都</a></li>
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=ya">雅安</a></li>
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=ms">眉山</a></li>
+          </ul>
+        </li>
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
@@ -309,12 +321,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
      
-<!--     <section class="content-header">
+<section class="content-header">
   <h1>
     渠道管理
     <small>source manage</small>
   </h1>
-</section> -->
+</section> 
 
 
     <!-- Main content -->

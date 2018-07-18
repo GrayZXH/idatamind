@@ -10,13 +10,46 @@ class Channel extends Common
 {
     public function index()
     {	
-        $list = modelChannel::all();
+        /*$list = modelChannel::all();
+        if ($list) {
+            $this->assign('list',$list);
+        }*/
+        $area=Request::get('area','cd');
+        switch ($area) {
+            case 'ya':
+                $list = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->select();
+                break;
+            case 'ms':
+                $list = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->select();
+                break;
+
+            default:
+                $list = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->select();
+                break;
+        }
         if ($list) {
             $this->assign('list',$list);
         }
+
+
+
         //print_r($list);
         return $this->fetch();
     }
+
+
+
+
+
     public function add()
     {	
         $code=Request::post('code');
@@ -47,10 +80,16 @@ class Channel extends Common
         }
         
     }
+
+
+
     public function edit()
     {	
         return $this->fetch();
     }
+
+
+
     public function delete()
     {	
         $id=Request::get('id');
@@ -68,4 +107,6 @@ class Channel extends Common
             return json($data);
         }
     }
+
+
 }

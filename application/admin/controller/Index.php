@@ -79,7 +79,7 @@ class Index extends Common
         //$date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
         $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
         $day=Request::get('day',date("Y-m-d"));
-        $area=Request::get('area','cd');
+      /*  $area=Request::get('area','cd');
         switch ($area) {
             case 'cd':
                 $source=modelChannel::where('status','可用')->column('code');
@@ -93,7 +93,7 @@ class Index extends Common
             default:
                 $source=modelChannel::where('status','可用')->column('code');
                 break;
-        }
+        }*/
 
         $source=modelChannel::where('status','可用')->column('code');
         
