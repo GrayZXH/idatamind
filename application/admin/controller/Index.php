@@ -79,23 +79,36 @@ class Index extends Common
         //$date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
         $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
         $day=Request::get('day',date("Y-m-d"));
-      /*  $area=Request::get('area','cd');
+        $area=Request::get('area','cd');
         switch ($area) {
             case 'cd':
-                $source=modelChannel::where('status','可用')->column('code');
-                break;
-            case 'ms':
-                $source=modelChannel::where('status','可用')->column('code');
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
                 break;
             case 'ya':
-                $source=modelChannel::where('status','可用')->column('code');
+                $source = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->column('code');
                 break;
-            default:
-                $source=modelChannel::where('status','可用')->column('code');
+            case 'ms':
+                $source = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->column('code');
                 break;
-        }*/
 
-        $source=modelChannel::where('status','可用')->column('code');
+            default:
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+        }
+
+        //$source=modelChannel::where('status','可用')->column('code');
         
         foreach ($source as $qd) {
             $datahq = array('list_cjrq' => $date, 'list_source'=> $qd);
@@ -105,17 +118,17 @@ class Index extends Common
         }
 
         //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
-        $datakh = array('list_cjrq'=>$date,'pageSize'=>1000);
+        $datakh = array('list_cjrq'=>$date,'pageSize'=>2000);
         $kh=get_kh_data($datakh);
-
-        if ($kh['total']) {
-            $warning='总数据量为：'.$kh['total'].'现在展示的数据不准确，请手动查询';
+        $num=$kh['total'];//转为客户的总数
+        if ($num>2000) {
+            $warning='总数据量为：'.$num.'现在展示的数据不准确，请手动查询';
+            $this->assign('warning',$warning);
         }
 
         $abc = array();
         $sum = array();
         $khabc=$kh['result'];
-        $num = count($khabc);
         foreach ($source as $v) {
             for ($i=0; $i < $num; $i++) { 
                 if ($v==$khabc[$i]['source']) {
@@ -139,7 +152,7 @@ class Index extends Common
         $this->assign('wx',$wx);
         $this->assign('sum',$sum);
         $this->assign('result',$result);
-        $this->assign('warning',$warning);
+        
         return $this->fetch();
     }
     public function hello($name = 'ThinkPHP5')
