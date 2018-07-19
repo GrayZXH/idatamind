@@ -129,20 +129,23 @@ class Index extends Common
         $abc = array();
         $sum = array();
         $khabc=$kh['result'];
-        foreach ($source as $v) {
-            for ($i=0; $i < $num; $i++) { 
-                if ($v==$khabc[$i]['source']) {
-                    if (isset($sum[$v])) {
-                        $sum[$v]+=1;
+        $result = array();
+        if ($num>0) {
+            foreach ($source as $v) {
+                for ($i=0; $i < $num; $i++) { 
+                    if ($v==$khabc[$i]['source']) {
+                        if (isset($sum[$v])) {
+                            $sum[$v]+=1;
+                        }else{
+                            $sum[$v]=1;
+                        }
+                        $abc[$v][$i]=$khabc[$i]['grade']?$khabc[$i]['grade']:'未填';
                     }else{
-                        $sum[$v]=1;
+                        $abc[$v][$i]=0;
                     }
-                    $abc[$v][$i]=$khabc[$i]['grade']?$khabc[$i]['grade']:'未填';
-                }else{
-                    $abc[$v][$i]='';
                 }
+                $result[$v]=array_count_values($abc[$v]);
             }
-            $result[$v]=array_count_values($abc[$v]);
         }
         //print_r($kh);
         //echo "<br>";

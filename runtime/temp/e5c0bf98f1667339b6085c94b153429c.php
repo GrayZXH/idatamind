@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531932161;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531930001;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531963412;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531908329;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -372,7 +372,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </tr>
 	
 	    
-	    <?php if(($result)): foreach($result as $key=>$vo): ?>  
+
+	    	<?php foreach($result as $key=>$vo): ?>  
 			    <tr>
 				    <td><?php echo htmlentities($key); ?></td>
 				    <td><?php echo htmlentities($hq[$key]); ?></td>
@@ -387,7 +388,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				    <td><?php echo $f=(isset($vo['F类 两年内拍'])?$vo['F类 两年内拍']:0) ?></td>
 				    <td><?php echo $wt=$yx-$a-$b-$c-$d-$e-$f ?></td>
 			  	</tr>
-			<?php endforeach; else: endif; ?>
+			<?php endforeach; ?>
+
  
   </table>
 </div>
