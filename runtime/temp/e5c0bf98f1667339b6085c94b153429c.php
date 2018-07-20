@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1531963412;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531908329;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1532059115;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531908329;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -370,27 +370,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	    <td>F类</td>
 	    <td>未填</td>
     </tr>
-	
-	    
-
-	    	<?php foreach($result as $key=>$vo): ?>  
-			    <tr>
-				    <td><?php echo htmlentities($key); ?></td>
-				    <td><?php echo htmlentities($hq[$key]); ?></td>
-				    <td><?php echo $yx=(isset($sum[$key])?$sum[$key]:0) ?></td>
-				    <td><?php echo $dd=($hq[$key]-$yx-$wx[$key]) ?></td>
-				    <td><?php echo htmlentities($wx[$key]); ?></td>
-				    <td><?php echo $a=(isset($vo['A类 一个月'])?$vo['A类 一个月']:0) ?></td>
-				    <td><?php echo $b=(isset($vo['B类 两个月'])?$vo['B类 两个月']:0) ?></td>
-				    <td><?php echo $c=(isset($vo['C类 三个月'])?$vo['C类 三个月']:0) ?></td>
-				    <td><?php echo $d=(isset($vo['D类 半年内拍'])?$vo['D类 半年内拍']:0) ?></td>
-				    <td><?php echo $e=(isset($vo['E类 一年内拍'])?$vo['E类 一年内拍']:0) ?></td>
-				    <td><?php echo $f=(isset($vo['F类 两年内拍'])?$vo['F类 两年内拍']:0) ?></td>
-				    <td><?php echo $wt=$yx-$a-$b-$c-$d-$e-$f ?></td>
-			  	</tr>
-			<?php endforeach; ?>
-
- 
+		<?php foreach($result as $key=>$vo): ?>  
+		    <tr>
+			    <td><?php echo htmlentities($key); ?></td>
+			    <td><?php echo htmlentities($hq[$key]); ?></td>
+			    <td><?php echo $yx=(isset($sum[$key])?$sum[$key]:0) ?></td>
+			    <td><?php echo $dd=($hq[$key]-$yx-$wx[$key]) ?></td>
+			    <td><?php echo htmlentities($wx[$key]); ?></td>
+			    <td><?php echo $a=(isset($vo['A类 一个月'])?$vo['A类 一个月']:0) ?></td>
+			    <td><?php echo $b=(isset($vo['B类 两个月'])?$vo['B类 两个月']:0) ?></td>
+			    <td><?php echo $c=(isset($vo['C类 三个月'])?$vo['C类 三个月']:0) ?></td>
+			    <td><?php echo $d=(isset($vo['D类 半年内拍'])?$vo['D类 半年内拍']:0) ?></td>
+			    <td><?php echo $e=(isset($vo['E类 一年内拍'])?$vo['E类 一年内拍']:0) ?></td>
+			    <td><?php echo $f=(isset($vo['F类 两年内拍'])?$vo['F类 两年内拍']:0) ?></td>
+			    <td><?php echo $wt=$yx-$a-$b-$c-$d-$e-$f ?></td>
+		  	</tr>
+		<?php endforeach; ?>
   </table>
 </div>
 

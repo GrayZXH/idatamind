@@ -109,12 +109,16 @@ class Index extends Common
         }
 
         //$source=modelChannel::where('status','可用')->column('code');
-        
-        foreach ($source as $qd) {
-            $datahq = array('list_cjrq' => $date, 'list_source'=> $qd);
-            $datawx = array('list_cjrq' => $date, 'list_source'=> $qd, 'list_status'=>"无效");
-            $hq[$qd]=get_xs_data($datahq);
-            $wx[$qd]=get_xs_data($datawx);
+        $hq = array();
+        $wx = array();
+        if ($source) {
+            $this->assign('source',$source);
+            foreach ($source as $qd) {
+                $datahq = array('list_cjrq' => $date, 'list_source'=> $qd);
+                $datawx = array('list_cjrq' => $date, 'list_source'=> $qd, 'list_status'=>"无效");
+                $hq[$qd]=get_xs_data($datahq);
+                $wx[$qd]=get_xs_data($datawx);
+            }
         }
 
         //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
@@ -127,7 +131,7 @@ class Index extends Common
         }
 
         $abc = array();
-        $sum = array();
+        $sum = array();//各渠道有效的个数
         $khabc=$kh['result'];
         $result = array();
         if ($num>0) {

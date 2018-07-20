@@ -54,8 +54,26 @@ class User extends Common
     {
         return $this->fetch();
     }
-    public function one()
+    public function delete()
     {   
+        $id=Request::get('id');
+        if ($id) {
+           $rs=modelUser::where('id','=',$id)->delete();
+           if ($rs) {
+                $data = array('status' =>1, 'message'=>'删除成功');
+                return json($data);
+            }else{
+                $data = array('status' =>0, 'message'=>'删除失败');
+                return json($data);
+            }
+        }else{
+            $data = array('status' =>0, 'message'=>'发生错误');
+            return json($data);
+        }
+    }
+
+    public function one()
+    {
         return $this->fetch();
     }
     
