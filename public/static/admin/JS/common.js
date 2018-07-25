@@ -18,6 +18,7 @@ $("#form-button-submit").click(function(){
                     $("#msgAlert .modal-body").html(data.message);
                     $("#msgAlert").modal();
                     location.reload();
+                    
                 } 
     }, "json");
     

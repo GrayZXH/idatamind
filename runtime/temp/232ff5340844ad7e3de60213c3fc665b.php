@@ -1,4 +1,4 @@
-<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\user\users.html";i:1532068951;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531908329;}*/ ?>
+<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\user\users.html";i:1532504627;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -248,7 +248,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
-         <li class="treeview active">
+         <li class="treeview">
           <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -310,7 +310,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </li>
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
+        <li><a href="<?php echo url('admin/User/users'); ?>"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
@@ -372,7 +372,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <td><?php echo htmlentities($vo['ugroup']); ?></td>
                 <td><?php echo htmlentities($vo['status']); ?></td>
                 <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>-->
-                    <button type="button" class="btn btn-default btn-xs">编辑</button> 
+                    <button type="button" class="btn btn-default btn-xs"><a href="<?php echo url('admin/User/edit'); ?>?id=<?php echo htmlentities($vo['id']); ?>">编辑</a></button> 
                     <button type="button" class="btn btn-danger btn-xs"><a href="<?php echo url('admin/User/delete'); ?>?id=<?php echo htmlentities($vo['id']); ?>">删除</a></button>
                 </td>
               </tr>
@@ -541,7 +541,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="#confirm" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-primary" id="#confirm" >确认</button>
         </div>
       </div>
     </div>

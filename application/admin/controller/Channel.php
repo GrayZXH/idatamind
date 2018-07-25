@@ -57,28 +57,33 @@ class Channel extends Common
         $cgroup=Request::post('cgroup');
         $store=Request::post('store');
         $status=Request::post('status');
-        if ($code && $cname && $cgroup && $store && $status) {
-            $channel = modelChannel::create([
-                'code'  =>  "$code",
-                'cname' =>  "$cname",
-                'cgroup'  =>  "$cgroup",
-                'store'  =>  "$store",
-                'status'  =>  "$status"
-            ]);
+        $has = modelChannel::where('code', $code)->find();
+        if ($has) {
+            $data = array('status' =>0, 'message'=>'渠道代码已存在');
+            return json($data);
+        }else{
+            if ($code && $cname && $cgroup && $store && $status) {
+                $channel = modelChannel::create([
+                    'code'  =>  "$code",
+                    'cname' =>  "$cname",
+                    'cgroup'  =>  "$cgroup",
+                    'store'  =>  "$store",
+                    'status'  =>  "$status"
+                ]);
 
-            $rs=$channel->id; // 获取自增ID
-            if ($rs) {
-                $data = array('status' =>1, 'message'=>'添加成功');
-                return json($data);
+                $rs=$channel->id; // 获取自增ID
+                if ($rs) {
+                    $data = array('status' =>1, 'message'=>'添加成功');
+                    return json($data);
+                }else{
+                    $data = array('status' =>0, 'message'=>'添加失败');
+                    return json($data);
+                }
             }else{
-                $data = array('status' =>0, 'message'=>'添加失败');
+                $data = array('status' =>0, 'message'=>'信息填写不全');
                 return json($data);
             }
-        }else{
-            $data = array('status' =>0, 'message'=>'信息填写不全');
-            return json($data);
         }
-        
     }
 
 

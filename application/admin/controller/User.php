@@ -2,7 +2,11 @@
 namespace app\admin\controller;
 use think\Controller;
 use think\facade\Request;
+use think\facade\Session;
 use app\common\model\User as modelUser;
+use app\common\model\Selectoptions;
+use app\common\model\Channel;
+use app\common\model\Channelowner;
 
 class User extends Common
 {
@@ -51,7 +55,32 @@ class User extends Common
     }
 
     public function edit()
-    {
+    {   
+        $id=Request::get('id');
+        if ($id) {
+            $user=modelUser::where('id','=',$id)->find();
+            if ($user) {
+                $select['user_group']=Selectoptions::where('user_group','<>',null)->column('user_group');
+                $select['user_status']=Selectoptions::where('user_status','<>',null)->column('user_status');
+                $select['user_role']=Selectoptions::where('user_role','<>',null)->column('user_role');
+                $owner = Channelowner::where('uid','=',$id)->column('code');
+                $this->assign('owner',$owner);
+            }else{
+                $this->redirect('admin/User/users');
+                //$data = array('status' =>0, 'message'=>'用户不存在');
+                //return json($data);
+            }
+        }else{
+            $this->redirect('admin/User/users');
+        }
+        
+        $channel=Channel::where('status','=','可用')->column('code');
+
+        
+        
+        $this->assign('channel',$channel);
+        $this->assign('select',$select);
+        $this->assign('user',$user);
         return $this->fetch();
     }
     public function delete()

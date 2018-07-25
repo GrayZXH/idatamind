@@ -28,7 +28,7 @@ class Login extends Controller
         if ($user) {
             $data_password=$user->password;
             if ($data_password==$password) {
-                Session::set('name',$email);
+                Session::set('user',$user);
                 $jsessionid=get_cookie();
                 Session::set('jsessionid',$jsessionid);
                 $data = array('status' => 1, 'message'=>'登录成功');

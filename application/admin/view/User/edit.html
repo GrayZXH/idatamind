@@ -27,29 +27,39 @@
             <form role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputNikename1">用户名</label>
-                  <input type="text" class="form-control" id="exampleInputNikename1" placeholder="Nikename">
+                  <label for="Nikename1">用户名</label>
+                  <input type="text" class="form-control" id="Nikename1" placeholder="Nikename" value="{$user.username}">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">邮箱</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <label for="Email1">邮箱</label>
+                  <input type="email" class="form-control" id="Email1" placeholder="Enter email" value="{$user.email}">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">密码</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label for="Password1">密码</label>
+                  <input type="text" class="form-control" id="Password1" placeholder="Password">
                 </div>
                 <div class="form-group">
                   <label>状态</label>
                   <select class="form-control">
-                    <option>可用</option>
-                    <option>禁用</option>
+                    {foreach $select.user_status as $vo } 
+                      <option {eq name="$vo" value="$user.status"} selected{/eq}>{$vo}</option>
+                    {/foreach}
                   </select>
                 </div>
                 <div class="form-group">
                   <label>分组</label>
                   <select class="form-control">
-                    <option>分组一</option>
-                    <option>分组二</option>
+                    {foreach $select.user_group as $vo } 
+                      <option {eq name="$vo" value="$user.ugroup"} selected{/eq} >{$vo}</option>
+                    {/foreach}
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>角色</label>
+                  <select class="form-control">
+                    {foreach $select.user_role as $vo } 
+                      <option {eq name="$vo" value="$user.role"} selected{/eq}>{$vo}</option>
+                    {/foreach}
                   </select>
                 </div>
               </div>
@@ -77,20 +87,10 @@
               <div class="box-body">
                 <div class="form-group">
                 <label>选取渠道</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"
-                        style="width: 100%;">
-                  <option>J1</option>
-                  <option>J2</option>
-                  <option>J3</option>
-                  <option>J4</option>
-                  <option>J5</option>
-                  <option>J6</option>
-                  <option>J7</option>
-                  <option>J8</option>
-                  <option>J9</option>
-                  <option>J10</option>
-                  <option>J11</option>
-                  <option>J12</option>
+                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
+                  {foreach $channel as $key=>$vo } 
+                      <option>{$vo}</option>
+                  {/foreach}
                 </select>
               </div>
               </div>

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:53:"E:\www\idatamind\application\admin\view\user\one.html";i:1531804186;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532503328;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1532512821;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>个人中心</title>
+  <title>用户中心</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -26,8 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
   
-<!-- bootstrap-datepicker -->
-<link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+
 
   
 
@@ -249,7 +248,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
-         <li class="treeview active">
+         <li class="treeview">
           <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -326,8 +325,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        title
-        <small>sub title</small>
+        用户管理
+        <small>users manage</small>
       </h1>
     </section>
 
@@ -339,85 +338,101 @@ scratch. This page gets rid of all links and provides the needed markup only.
         | Your Page Content Here |
         -------------------------->
       
-	<div class="row">
+
+<div class="row">
+        <!-- left column -->
         <div class="col-md-3">
-
-          <!-- Profile Image -->
-          <div class="box box-primary">
-            <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="/static/admin/dist/img/user4-128x128.jpg" alt="User profile picture">
-
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
-
-              <p class="text-muted text-center">Software Engineer</p>
-
-              <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">1,322</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">543</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Friends</b> <a class="pull-right">13,287</a>
-                </li>
-              </ul>
-
-              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+          <!-- general form elements -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">账号密码</h3>
             </div>
-            <!-- /.box-body -->
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="Nikename1">用户名</label>
+                  <input type="text" class="form-control" id="Nikename1" placeholder="Nikename" value="<?php echo htmlentities($user['username']); ?>">
+                </div>
+                <div class="form-group">
+                  <label for="Email1">邮箱</label>
+                  <input type="email" class="form-control" id="Email1" placeholder="Enter email" value="<?php echo htmlentities($user['email']); ?>">
+                </div>
+                <div class="form-group">
+                  <label for="Password1">密码</label>
+                  <input type="text" class="form-control" id="Password1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label>状态</label>
+                  <select class="form-control">
+                    <?php foreach($select['user_status'] as $vo): ?> 
+                      <option <?php if($vo == $user['status']): ?> selected<?php endif; ?>><?php echo htmlentities($vo); ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>分组</label>
+                  <select class="form-control">
+                    <?php foreach($select['user_group'] as $vo): ?> 
+                      <option <?php if($vo == $user['ugroup']): ?> selected<?php endif; ?> ><?php echo htmlentities($vo); ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>角色</label>
+                  <select class="form-control">
+                    <?php foreach($select['user_role'] as $vo): ?> 
+                      <option <?php if($vo == $user['role']): ?> selected<?php endif; ?>><?php echo htmlentities($vo); ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-success pull-right">提交</button>
+              </div>
+            </form>
           </div>
           <!-- /.box -->
 
-          
         </div>
-        <!-- /.col -->
+        <!--/.col (left) -->
+        <!-- right column -->
         <div class="col-md-9">
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab" aria-expanded="true">当日花费</a></li>
-              <li class=""><a href="#timeline" data-toggle="tab" aria-expanded="false">Timeline</a></li>
-              <li class=""><a href="#settings" data-toggle="tab" aria-expanded="false">Settings</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="activity">
-
-		            <div class="box-body">
-		              <!-- Date -->
-		              <div class="form-group">
-		                <label>Date:</label>
-
-		                <div class="input-group date">
-		                  <div class="input-group-addon">
-		                    <i class="fa fa-calendar"></i>
-		                  </div>
-		                  <input type="text" class="form-control pull-right" id="datepicker">
-		                </div>
-		                <!-- /.input group -->
-		              </div>
-		              <!-- /.form group -->
-
-		            </div>
-		            <!-- /.box-body -->
-
-              </div>
-              <!-- /.tab-pane -->
-              <div class="tab-pane" id="timeline">
-                2
-              </div>
-              <!-- /.tab-pane -->
-
-              <div class="tab-pane" id="settings">
-                3
-              </div>
-              <!-- /.tab-pane -->
+            <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">渠道管理</h3>
             </div>
-            <!-- /.tab-content -->
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                <label>选取渠道</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
+                  <?php foreach($channel as $key=>$vo): ?> 
+                      <option><?php echo htmlentities($vo); ?></option>
+                  <?php endforeach; ?>
+                </select>
+              </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+              </div>
+            </form>
           </div>
-          <!-- /.nav-tabs-custom -->
+              
+
         </div>
-        <!-- /.col -->
+        <!--/.col (right) -->
       </div>
+
+
 
  
 
@@ -537,17 +552,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 3.3.7 -->
 <script src="/static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!-- bootstrap-datepicker -->
-<script src="/static/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="/static/admin/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
+
+<script src="/static/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
 <script>
-  $('#datepicker').datepicker({
-      todayBtn: "linked",
-      autoclose: true,
-      language: 'zh-CN',
-      todayHighlight: true
-    })
+	$('.select2').select2()
 </script>
+
 
 
 <!-- AdminLTE App -->

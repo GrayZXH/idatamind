@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531930001;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531930001;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531903029;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -246,7 +246,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
-         <li class="treeview active">
+         <li class="treeview">
           <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -308,7 +308,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </li>
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
+        <li><a href="<?php echo url('admin/User/users'); ?>"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
@@ -547,7 +547,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="#confirm" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-primary" id="#confirm" >确认</button>
         </div>
       </div>
     </div>

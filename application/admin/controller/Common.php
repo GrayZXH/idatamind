@@ -15,7 +15,7 @@ class Common extends Controller
 	}
 
 	public function isLogin(){
-		$islogin = Session::has('name');
+		$islogin = Session::has('user');
 		if (!$islogin) {
 			$this->redirect('admin/Login/index');
 		}
