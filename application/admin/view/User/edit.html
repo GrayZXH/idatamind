@@ -29,6 +29,7 @@
                 <div class="form-group">
                   <label for="Nikename1">用户名</label>
                   <input type="text" class="form-control" id="Nikename1" placeholder="Nikename" value="{$user.username}">
+                  <input type="text" style="display: none;" value="{$user.id}">
                 </div>
                 <div class="form-group">
                   <label for="Email1">邮箱</label>
@@ -89,7 +90,11 @@
                 <label>选取渠道</label>
                 <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
                   {foreach $channel as $key=>$vo } 
-                      <option>{$vo}</option>
+                    {foreach $owner as $ow}
+                      {if $ow == $vo}<option selected>{$vo}</option>
+                      {else /}<option>{$vo}</option>
+                      {/if}
+                    {/foreach}
                   {/foreach}
                 </select>
               </div>

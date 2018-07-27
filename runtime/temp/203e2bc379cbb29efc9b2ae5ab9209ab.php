@@ -1,4 +1,4 @@
-<?php /*a:2:{s:53:"E:\www\idatamind\application\admin\view\user\one.html";i:1531804186;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532503328;}*/ ?>
+<?php /*a:2:{s:53:"E:\www\idatamind\application\admin\view\user\one.html";i:1531804186;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -249,7 +249,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
-         <li class="treeview active">
+         <li class="treeview">
           <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>

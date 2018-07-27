@@ -20,20 +20,20 @@ class Channel extends Common
                 $list = modelChannel::where([
                     ['store','=','雅安'],
                     ['status','=','可用']
-                ])->select();
+                ])->paginate(20);
                 break;
             case 'ms':
                 $list = modelChannel::where([
                     ['store','=','眉山'],
                     ['status','=','可用']
-                ])->select();
+                ])->paginate(20);
                 break;
 
             default:
                 $list = modelChannel::where([
                     ['store','=','成都'],
                     ['status','=','可用']
-                ])->select();
+                ])->paginate(20);
                 break;
         }
         if ($list) {

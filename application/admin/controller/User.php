@@ -12,7 +12,7 @@ class User extends Common
 {
     public function users()
     {	
-        $users=modelUser::all();
+        $users=modelUser::where('id','>',1)->paginate(20);
         if ($users) {
             $this->assign('users',$users);
         }
@@ -63,7 +63,7 @@ class User extends Common
                 $select['user_group']=Selectoptions::where('user_group','<>',null)->column('user_group');
                 $select['user_status']=Selectoptions::where('user_status','<>',null)->column('user_status');
                 $select['user_role']=Selectoptions::where('user_role','<>',null)->column('user_role');
-                $owner = Channelowner::where('uid','=',$id)->column('code');
+                $owner = Channelowner::where('uid','=',$id)->column('code');//获取此用户拥有的所有渠道
                 $this->assign('owner',$owner);
             }else{
                 $this->redirect('admin/User/users');
@@ -74,10 +74,7 @@ class User extends Common
             $this->redirect('admin/User/users');
         }
         
-        $channel=Channel::where('status','=','可用')->column('code');
-
-        
-        
+        $channel=Channel::where('status','=','可用')->column('code');//获取系统中所有可用的渠道
         $this->assign('channel',$channel);
         $this->assign('select',$select);
         $this->assign('user',$user);

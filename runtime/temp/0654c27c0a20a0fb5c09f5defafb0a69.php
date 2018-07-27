@@ -1,4 +1,4 @@
-<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1531903029;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
+<?php /*a:2:{s:58:"E:\www\idatamind\application\admin\view\channel\index.html";i:1532571441;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -382,6 +382,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </tbody></table>
     </div>
     <!-- /.box-body -->
+    <div class="text-center"><?php echo $list; ?></div>
   </div>
   <!-- /.box -->
   <!-- Button trigger modal -->

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\user\users.html";i:1532504627;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
+<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\user\users.html";i:1532573962;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -363,23 +363,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <th>状态</th>
             <th>操作</th>
           </tr> 
-            
-            <?php foreach($users as $key=>$vo): ?> 
-              <tr>
-                <td><?php echo htmlentities($vo['id']); ?></td>
-                <td><?php echo htmlentities($vo['username']); ?></td>
-                <td><?php echo htmlentities($vo['role']); ?></td>
-                <td><?php echo htmlentities($vo['ugroup']); ?></td>
-                <td><?php echo htmlentities($vo['status']); ?></td>
-                <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>-->
-                    <button type="button" class="btn btn-default btn-xs"><a href="<?php echo url('admin/User/edit'); ?>?id=<?php echo htmlentities($vo['id']); ?>">编辑</a></button> 
-                    <button type="button" class="btn btn-danger btn-xs"><a href="<?php echo url('admin/User/delete'); ?>?id=<?php echo htmlentities($vo['id']); ?>">删除</a></button>
-                </td>
-              </tr>
-            <?php endforeach; ?>        
-      </tbody></table>
+          <?php foreach($users as $key=>$vo): ?> 
+            <tr>
+              <td><?php echo htmlentities($vo['id']); ?></td>
+              <td><?php echo htmlentities($vo['username']); ?></td>
+              <td><?php echo htmlentities($vo['role']); ?></td>
+              <td><?php echo htmlentities($vo['ugroup']); ?></td>
+              <td><?php echo htmlentities($vo['status']); ?></td>
+              <td><!-- <button type="button" class="btn btn-warning btn-xs">禁用</button>-->
+                  <button type="button" class="btn btn-default btn-xs"><a href="<?php echo url('admin/User/edit'); ?>?id=<?php echo htmlentities($vo['id']); ?>">编辑</a></button> 
+                  <button type="button" class="btn btn-danger btn-xs"><a href="<?php echo url('admin/User/delete'); ?>?id=<?php echo htmlentities($vo['id']); ?>">删除</a></button>
+              </td>
+            </tr>
+          <?php endforeach; ?>        
+        </tbody>
+      </table>
     </div>
     <!-- /.box-body -->
+    <div class="text-center"><?php echo $users; ?></div>
   </div>
   <!-- Modal -->
 <div class="modal fade" id="ModalAddUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -403,7 +404,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>角色</label>
                   <select class="form-control" name="role">
-                    <option selected="selected">推广</option>
+                    <option selected>推广</option>
                     <option>网销</option>
                     <option>管理员</option>
                   </select>
@@ -411,7 +412,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>分组</label>
                   <select class="form-control" name="ugroup">
-                    <option selected="selected">未分组</option>
+                    <option selected>未分组</option>
                     <option>总店</option>
                     <option>雅安</option>
                     <option>眉山</option>
@@ -420,7 +421,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                   <label>状态</label>
                   <select class="form-control" name="status">
-                    <option selected="selected">可用</option>
+                    <option selected>可用</option>
                     <option>禁用</option>
                   </select>
                 </div>
