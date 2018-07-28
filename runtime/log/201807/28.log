@@ -1,0 +1,1555 @@
+---------------------------------------------------------------
+[ 2018-07-28T11:52:39+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.082509s][吞吐率：12.12req/s] [内存消耗：1,190.98kb] [文件加载：55]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T11:52:39+08:00 ] 127.0.0.1 GET /login.html
+[ info ] idatamind.com/login.html [运行时间：0.045445s][吞吐率：22.00req/s] [内存消耗：1,119.29kb] [文件加载：53]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Login/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T11:52:48+08:00 ] 127.0.0.1 POST /admin/Login/check
+[ info ] idatamind.com/admin/Login/check [运行时间：0.224498s][吞吐率：4.45req/s] [内存消耗：2,144.98kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin/login/check',
+  'route' => 'admin/Login/check',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://idatamind.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'rayzxh@163.com',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003120s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.035086s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+[ 2018-07-28T11:53:09+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：21.261015s][吞吐率：0.05req/s] [内存消耗：1,413.08kb] [文件加载：59]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T11:53:09+08:00 ] 127.0.0.1 POST /admin/Login/check
+[ info ] idatamind.com/admin/Login/check [运行时间：6.405864s][吞吐率：0.16req/s] [内存消耗：2,145.13kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin/login/check',
+  'route' => 'admin/Login/check',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://idatamind.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'rayzxh@163.com',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003047s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008850s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-07-28T11:53:14+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.740137s][吞吐率：1.35req/s] [内存消耗：1,413.27kb] [文件加载：59]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T11:53:21+08:00 ] 127.0.0.1 GET /user/edit
+[ info ] idatamind.com/user/edit [运行时间：0.027965s][吞吐率：35.76req/s] [内存消耗：1,484.55kb] [文件加载：63]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T11:53:21+08:00 ] 127.0.0.1 GET /users.html
+[ info ] idatamind.com/users.html [运行时间：0.059843s][吞吐率：16.71req/s] [内存消耗：2,353.66kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'users',
+  'route' => 'admin/User/users',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\users.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011558s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008525s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE  `id` > 1 LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` > 1 LIMIT 0,20 [ RunTime:0.000353s ]
+---------------------------------------------------------------
+[ 2018-07-28T11:53:26+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.234051s][吞吐率：4.27req/s] [内存消耗：2,341.48kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012140s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.007989s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.035605s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.048784s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.044681s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.001007s ]
+---------------------------------------------------------------
+[ 2018-07-28T11:55:26+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.156630s][吞吐率：6.38req/s] [内存消耗：2,512.60kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012304s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012039s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007544s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008338s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008024s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000340s ]
+---------------------------------------------------------------
+[ 2018-07-28T11:55:29+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.088896s][吞吐率：11.25req/s] [内存消耗：2,341.87kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013003s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009276s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008393s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007952s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007932s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-07-28T12:02:27+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.099552s][吞吐率：10.04req/s] [内存消耗：2,514.60kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003019s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008538s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.018380s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007611s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007955s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2018-07-28T13:57:27+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.100190s][吞吐率：9.98req/s] [内存消耗：2,514.72kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002839s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.017350s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.005373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008068s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008213s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008251s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000346s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:09:02+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.087943s][吞吐率：11.37req/s] [内存消耗：2,512.68kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002802s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008861s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.009145s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007852s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.009573s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:13:24+08:00 ] 127.0.0.1 GET /user/edit.html?id=4
+[ info ] idatamind.com/user/edit.html?id=4 [运行时间：0.102593s][吞吐率：9.75req/s] [内存消耗：2,515.16kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012113s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009851s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008217s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.009066s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 4 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008450s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000409s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:13:33+08:00 ] 127.0.0.1 GET /users.html
+[ info ] idatamind.com/users.html [运行时间：0.053521s][吞吐率：18.68req/s] [内存消耗：2,354.08kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'users',
+  'route' => 'admin/User/users',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=4',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\users.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002410s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008725s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE  `id` > 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` > 1 LIMIT 0,20 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:13:37+08:00 ] 127.0.0.1 GET /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.094397s][吞吐率：10.59req/s] [内存消耗：2,341.63kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012204s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.015312s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008531s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008107s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008513s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:23:57+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.037939s][吞吐率：26.36req/s] [内存消耗：870.16kb] [文件加载：45]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-28T14:25:12+08:00 ] 127.0.0.1 GET /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.098569s][吞吐率：10.15req/s] [内存消耗：2,514.93kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/users.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002908s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.011551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007830s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007797s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008528s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000372s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:25:21+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.098122s][吞吐率：10.19req/s] [内存消耗：2,343.07kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://idatamind.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '41',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 'J2',
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011869s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008121s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007998s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008167s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.009390s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000395s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:31:58+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.085333s][吞吐率：11.72req/s] [内存消耗：2,515.03kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://idatamind.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '52',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 'J2',
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003193s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008470s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008627s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007283s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008610s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000339s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:32:07+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.091851s][吞吐率：10.89req/s] [内存消耗：2,343.08kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '52',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 'J2',
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011398s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009261s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.009208s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008408s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007807s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000325s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:33:47+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.081936s][吞吐率：12.20req/s] [内存消耗：2,515.00kb] [文件加载：76]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '52',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 'J2',
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002578s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008739s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008189s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007883s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008767s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[ 2018-07-28T14:33:57+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.108393s][吞吐率：9.23req/s] [内存消耗：2,252.27kb] [文件加载：72]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://idatamind.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '70',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J1',
+    1 => 'J6',
+    2 => 'J83',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012138s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.036490s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.009249s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008704s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000324s ]
+[ error ] [0]variable type error：array[E:\www\idatamind\thinkphp\library\think\Request.php:1404]
+---------------------------------------------------------------
+[ 2018-07-28T15:01:45+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.085970s][吞吐率：11.63req/s] [内存消耗：2,343.15kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '70',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J1',
+    1 => 'J6',
+    2 => 'J83',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002839s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008802s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.009458s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007893s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008090s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2018-07-28T15:07:00+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.082072s][吞吐率：12.18req/s] [内存消耗：2,343.13kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://idatamind.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '89',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J42',
+    1 => 'J2',
+    2 => 'J24',
+    3 => 'J51',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003587s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008548s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007856s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008644s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007637s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000452s ]
+---------------------------------------------------------------
+[ 2018-07-28T15:24:09+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.103960s][吞吐率：9.62req/s] [内存消耗：2,343.03kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '89',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J42',
+    1 => 'J2',
+    2 => 'J24',
+    3 => 'J51',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011975s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008670s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007759s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008744s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008430s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000435s ]
+---------------------------------------------------------------
+[ 2018-07-28T15:27:33+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.103677s][吞吐率：9.65req/s] [内存消耗：2,343.03kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '89',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J42',
+    1 => 'J2',
+    2 => 'J24',
+    3 => 'J51',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012933s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009278s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.008233s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.008152s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008048s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000349s ]
+---------------------------------------------------------------
+[ 2018-07-28T15:35:42+08:00 ] 127.0.0.1 POST /user/edit.html?id=3
+[ info ] idatamind.com/user/edit.html?id=3 [运行时间：0.099430s][吞吐率：10.06req/s] [内存消耗：2,342.91kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user/edit',
+  'route' => 'admin/User/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=rg1rt4pcuc1fjvh1caou3uhui5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/user/edit.html?id=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://idatamind.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.60',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '89',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'channel' => 
+  array (
+    0 => 'J42',
+    1 => 'J2',
+    2 => 'J24',
+    3 => 'J51',
+  ),
+  'action' => 'editchannel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\edit.html [ array (
+  0 => 'owner',
+  1 => 'channel',
+  2 => 'select',
+  3 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013482s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.020565s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `selectoptions` [ RunTime:0.007702s ]
+[ sql ] [ SQL ] SELECT `user_group` FROM `selectoptions` WHERE  `user_group` IS NOT NULL [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT `user_status` FROM `selectoptions` WHERE  `user_status` IS NOT NULL [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT `user_role` FROM `selectoptions` WHERE  `user_role` IS NOT NULL [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channelowner` [ RunTime:0.007349s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channelowner` WHERE  `uid` = 3 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008404s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `status` = '可用' [ RunTime:0.000362s ]

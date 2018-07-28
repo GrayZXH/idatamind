@@ -24,30 +24,29 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="Nikename1">用户名</label>
-                  <input type="text" class="form-control" id="Nikename1" placeholder="Nikename" value="{$user.username}">
-                  <input type="text" style="display: none;" value="{$user.id}">
+                  <label for="Nikename">用户名</label>
+                  <input type="text" class="form-control" id="Nikename" name="username" placeholder="Nikename" value="{$user.username}">
                 </div>
                 <div class="form-group">
                   <label for="Email1">邮箱</label>
-                  <input type="email" class="form-control" id="Email1" placeholder="Enter email" value="{$user.email}">
+                  <input type="email" class="form-control" id="Email1" name="email" placeholder="Enter email" value="{$user.email}">
                 </div>
                 <div class="form-group">
-                  <label for="Password1">密码</label>
-                  <input type="text" class="form-control" id="Password1" placeholder="Password">
+                  <label for="Password">密码</label>
+                  <input type="password" class="form-control" id="Password" name="password" placeholder="Password" value="{$user.password}">
                 </div>
                 <div class="form-group">
                   <label>状态</label>
-                  <select class="form-control">
+                  <select class="form-control" name="status">
                     {foreach $select.user_status as $vo } 
                       <option {eq name="$vo" value="$user.status"} selected{/eq}>{$vo}</option>
                     {/foreach}
                   </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" name="ugroup">
                   <label>分组</label>
                   <select class="form-control">
                     {foreach $select.user_group as $vo } 
@@ -57,7 +56,7 @@
                 </div>
                 <div class="form-group">
                   <label>角色</label>
-                  <select class="form-control">
+                  <select class="form-control" name="role">
                     {foreach $select.user_role as $vo } 
                       <option {eq name="$vo" value="$user.role"} selected{/eq}>{$vo}</option>
                     {/foreach}
@@ -68,6 +67,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
+                <input type="text" style="display: none;" name="action" value="updateuser">
                 <button type="submit" class="btn btn-success pull-right">提交</button>
               </div>
             </form>
@@ -84,17 +84,21 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="post" action="">
               <div class="box-body">
                 <div class="form-group">
                 <label>选取渠道</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
-                  {foreach $channel as $key=>$vo } 
-                    {foreach $owner as $ow}
-                      {if $ow == $vo}<option selected>{$vo}</option>
-                      {else /}<option>{$vo}</option>
-                      {/if}
-                    {/foreach}
+                <select name="channel[]" class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
+                  {foreach $channel as $vo } 
+                    {empty name="owner"}
+                      <option>{$vo}</option>
+                    {else /}
+                      {foreach $owner as $ow}
+                        {if $ow == $vo}<option selected>{$vo}</option>
+                        {else /}<option>{$vo}</option>
+                        {/if}
+                      {/foreach}
+                    {/empty}
                   {/foreach}
                 </select>
               </div>
@@ -102,6 +106,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
+                <input type="text" style="display: none;" name="action" value="editchannel">
                 <button type="submit" class="btn btn-primary pull-right">提交</button>
               </div>
             </form>

@@ -73,6 +73,25 @@ class User extends Common
         }else{
             $this->redirect('admin/User/users');
         }
+
+        $action=Request::post('action');
+        if ($action) {
+            switch ($action) {
+                case 'updateuser':
+                    # code...
+                    break;
+
+                case 'editchannel':
+                        $channelstr=implode(",",$_POST['channel'];);
+                    }
+
+                    break;
+
+                default:
+                    # code...
+                    break;
+            }
+        }
         
         $channel=Channel::where('status','=','可用')->column('code');//获取系统中所有可用的渠道
         $this->assign('channel',$channel);

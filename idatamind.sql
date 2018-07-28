@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2018 �?07 �?18 �?10:08
+-- 生成日期: 2018 �?07 �?28 �?10:07
 -- 服务器版本: 5.5.53
 -- PHP 版本: 5.6.27
 
@@ -78,16 +78,22 @@ INSERT INTO `channel` (`id`, `code`, `cname`, `status`, `cgroup`, `store`) VALUE
 -- --------------------------------------------------------
 
 --
--- 表的结构 `cowner`
+-- 表的结构 `channelowner`
 --
 
-CREATE TABLE IF NOT EXISTS `cowner` (
+CREATE TABLE IF NOT EXISTS `channelowner` (
   `id` int(9) unsigned NOT NULL AUTO_INCREMENT,
-  `cid` int(9) unsigned NOT NULL COMMENT '渠道ID',
-  `cname` varchar(50) NOT NULL COMMENT '渠道名称',
-  `uid` int(9) unsigned DEFAULT NULL COMMENT '所属用户',
+  `uid` int(9) unsigned NOT NULL COMMENT '所属用户',
+  `code` varchar(1000) NOT NULL COMMENT '渠道编码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `channelowner`
+--
+
+INSERT INTO `channelowner` (`id`, `uid`, `code`) VALUES
+(1, 3, 'J2');
 
 -- --------------------------------------------------------
 
@@ -165,6 +171,36 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `store` smallint(4) unsigned NOT NULL DEFAULT '1' COMMENT '店铺ID',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `selectoptions`
+--
+
+CREATE TABLE IF NOT EXISTS `selectoptions` (
+  `id` int(9) unsigned NOT NULL AUTO_INCREMENT,
+  `user_group` varchar(50) DEFAULT NULL,
+  `user_role` varchar(50) DEFAULT NULL,
+  `user_status` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- 转存表中的数据 `selectoptions`
+--
+
+INSERT INTO `selectoptions` (`id`, `user_group`, `user_role`, `user_status`) VALUES
+(1, '总店', NULL, NULL),
+(2, '眉山', NULL, NULL),
+(3, '雅安', NULL, NULL),
+(4, '未分组', NULL, NULL),
+(5, NULL, '超级管理员', NULL),
+(6, NULL, '管理员', NULL),
+(7, NULL, '推广', NULL),
+(8, NULL, '普通员工', NULL),
+(9, NULL, NULL, '可用'),
+(10, NULL, NULL, '禁用');
 
 -- --------------------------------------------------------
 

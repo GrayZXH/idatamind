@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1532575873;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1532759621;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -349,30 +349,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="Nikename1">用户名</label>
-                  <input type="text" class="form-control" id="Nikename1" placeholder="Nikename" value="<?php echo htmlentities($user['username']); ?>">
-                  <input type="text" style="display: none;" value="<?php echo htmlentities($user['id']); ?>">
+                  <label for="Nikename">用户名</label>
+                  <input type="text" class="form-control" id="Nikename" name="username" placeholder="Nikename" value="<?php echo htmlentities($user['username']); ?>">
                 </div>
                 <div class="form-group">
                   <label for="Email1">邮箱</label>
-                  <input type="email" class="form-control" id="Email1" placeholder="Enter email" value="<?php echo htmlentities($user['email']); ?>">
+                  <input type="email" class="form-control" id="Email1" name="email" placeholder="Enter email" value="<?php echo htmlentities($user['email']); ?>">
                 </div>
                 <div class="form-group">
-                  <label for="Password1">密码</label>
-                  <input type="text" class="form-control" id="Password1" placeholder="Password">
+                  <label for="Password">密码</label>
+                  <input type="password" class="form-control" id="Password" name="password" placeholder="Password" value="<?php echo htmlentities($user['password']); ?>">
                 </div>
                 <div class="form-group">
                   <label>状态</label>
-                  <select class="form-control">
+                  <select class="form-control" name="status">
                     <?php foreach($select['user_status'] as $vo): ?> 
                       <option <?php if($vo == $user['status']): ?> selected<?php endif; ?>><?php echo htmlentities($vo); ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" name="ugroup">
                   <label>分组</label>
                   <select class="form-control">
                     <?php foreach($select['user_group'] as $vo): ?> 
@@ -382,7 +381,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <div class="form-group">
                   <label>角色</label>
-                  <select class="form-control">
+                  <select class="form-control" name="role">
                     <?php foreach($select['user_role'] as $vo): ?> 
                       <option <?php if($vo == $user['role']): ?> selected<?php endif; ?>><?php echo htmlentities($vo); ?></option>
                     <?php endforeach; ?>
@@ -393,6 +392,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.box-body -->
 
               <div class="box-footer">
+                <input type="text" style="display: none;" name="action" value="updateuser">
                 <button type="submit" class="btn btn-success pull-right">提交</button>
               </div>
             </form>
@@ -409,20 +409,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="post" action="">
               <div class="box-body">
                 <div class="form-group">
                 <label>选取渠道</label>
-                <select class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
-                  <?php foreach($channel as $key=>$vo): foreach($owner as $ow): if($ow == $vo): ?><option selected><?php echo htmlentities($vo); ?></option>
-                      <?php else: ?><option><?php echo htmlentities($vo); ?></option>
-                      <?php endif; endforeach; endforeach; ?>
+                <select name="channel[]" class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
+                  <?php foreach($channel as $vo): if(empty($owner) || (($owner instanceof \think\Collection || $owner instanceof \think\Paginator ) && $owner->isEmpty())): ?>
+                      <option><?php echo htmlentities($vo); ?></option>
+                    <?php else: foreach($owner as $ow): if($ow == $vo): ?><option selected><?php echo htmlentities($vo); ?></option>
+                        <?php else: ?><option><?php echo htmlentities($vo); ?></option>
+                        <?php endif; endforeach; endif; endforeach; ?>
                 </select>
               </div>
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
+                <input type="text" style="display: none;" name="action" value="editchannel">
                 <button type="submit" class="btn btn-primary pull-right">提交</button>
               </div>
             </form>
