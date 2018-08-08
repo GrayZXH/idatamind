@@ -24,7 +24,7 @@ Route::get('test', 'admin/Test/index');
 Route::get('', 'admin/Index/index');
 Route::get('today', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
-Route::get('month', 'admin/Index/month');
+Route::get('daydetail', 'admin/Index/daydetail');
 Route::get('source', 'admin/Index/source');
 
 Route::get('users', 'admin/User/users');//用户列表

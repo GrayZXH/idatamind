@@ -82,9 +82,7 @@ class User extends Common
                     break;
 
                 case 'editchannel':
-                        $channelstr=implode(",",$_POST['channel'];);
-                    }
-
+                        $channelstr=implode(",",$_POST['channel']);
                     break;
 
                 default:

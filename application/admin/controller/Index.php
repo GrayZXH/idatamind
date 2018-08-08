@@ -60,17 +60,80 @@ class Index extends Common
 
         //return $this->fetch();
     }
-    public function month()
+    public function daydetail()
     {
-        $data1 = array('list_cjrq'=>'b=2018-06-01,e=2018-06-30',
-                       'list_source'=> 'J1');
-        $data2 = array('list_cjrq'=>'b=2018-06-01,e=2018-06-30',
-                       'list_source'=> 'J2');
-        $j1=get_xs_data($data1);
-        $j2=get_xs_data($data2);
-        $source['j1'] = $j1;
-        $source['j2'] = $j2;
-        $this->assign('source',$source);
+        //$source=modelChannel::where('status','可用')->column('code');
+        $area=Request::get('area','cd');
+            switch ($area) {
+                case 'cd':
+                    $source = modelChannel::where([
+                        ['store','=','成都'],
+                        ['status','=','可用']
+                    ])->column('code');
+                    break;
+                case 'ya':
+                    $source = modelChannel::where([
+                        ['store','=','雅安'],
+                        ['status','=','可用']
+                    ])->column('code');
+                    break;
+                case 'ms':
+                    $source = modelChannel::where([
+                        ['store','=','眉山'],
+                        ['status','=','可用']
+                    ])->column('code');
+                    break;
+
+                default:
+                    $source = modelChannel::where([
+                        ['store','=','成都'],
+                        ['status','=','可用']
+                    ])->column('code');
+                    break;
+        }
+        $day=Request::get('day',date("Y-m-d"));
+        $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
+        $data = array('list_cjrq' => $date,'pageSize'=>1000);
+        $rs=get_xs_data($data)['result'];
+        $result='';
+        foreach ($source as  $qd) {
+            foreach ($rs as $value) {
+                if ($qd==$value['source']) {
+                    if (isset($result[$qd]['hq'])) {
+                        $result[$qd]['hq']+=1;
+                    }else{
+                        $result[$qd]['hq']=1;
+                    }
+                    if ($value['status']=='转为客户') {
+                        if (isset($result[$qd]['yx'])) {
+                            $result[$qd]['yx']+=1;
+                        }else{
+                            $result[$qd]['yx']=1;
+                        }
+                    }
+                    if ($value['status']=='无效') {
+                        if (isset($result[$qd]['wx'])) {
+                            $result[$qd]['wx']+=1;
+                        }else{
+                            $result[$qd]['wx']=1;
+                        }
+                    }
+                }
+            }
+            if (!isset($result[$qd])) {
+                $result[$qd]['hq']=0;
+                $result[$qd]['yx']=0;
+                $result[$qd]['wx']=0;
+            }
+        }
+
+
+        
+        $this->assign('area',$area);
+        $this->assign('day',$day);
+        $this->assign('result',$result);
+        
+
         return $this->fetch();
     }
 
@@ -78,9 +141,10 @@ class Index extends Common
     {   
         //$date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
         $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
+        //$date='b=2018-07-26,e=2018-07-31';
         $day=Request::get('day',date("Y-m-d"));
-        $area=Request::get('area','cd');
-        switch ($area) {
+        //$area=Request::get('area','cd');
+        /*switch ($area) {
             case 'cd':
                 $source = modelChannel::where([
                     ['store','=','成都'],
@@ -106,9 +170,9 @@ class Index extends Common
                     ['status','=','可用']
                 ])->column('code');
                 break;
-        }
+        }*/
 
-        //$source=modelChannel::where('status','可用')->column('code');
+        $source=modelChannel::where('status','可用')->column('code');
         $hq = array();
         $wx = array();
         if ($source) {
@@ -116,16 +180,16 @@ class Index extends Common
             foreach ($source as $qd) {
                 $datahq = array('list_cjrq' => $date, 'list_source'=> $qd);
                 $datawx = array('list_cjrq' => $date, 'list_source'=> $qd, 'list_status'=>"无效");
-                $hq[$qd]=get_xs_data($datahq);
-                $wx[$qd]=get_xs_data($datawx);
+                $hq[$qd]=get_xs_data($datahq)['total'];
+                $wx[$qd]=get_xs_data($datawx)['total'];
             }
         }
 
         //$date='b='.date("Y-m-d").',e='.date("Y-m-d");
-        $datakh = array('list_cjrq'=>$date,'pageSize'=>2000);
+        $datakh = array('list_cjrq'=>$date,'pageSize'=>6000);
         $kh=get_kh_data($datakh);
         $num=$kh['total'];//转为客户的总数
-        if ($num>2000) {
+        if ($num>6000) {
             $warning='总数据量为：'.$num.'现在展示的数据不准确，请手动查询';
             $this->assign('warning',$warning);
         }

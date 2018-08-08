@@ -1,4 +1,4 @@
-<?php /*a:2:{s:56:"E:\www\idatamind\application\admin\view\index\month.html";i:1533733416;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
+<?php /*a:2:{s:60:"E:\www\idatamind\application\admin\view\index\daydetail.html";i:1533734339;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>source</title>
+  <title>日客资统计</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -297,9 +297,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">成都</a></li>
-            <li><a href="#">雅安</a></li>
-            <li><a href="#">眉山</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=cd">成都</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ya">雅安</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ms">眉山</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -332,7 +332,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <section class="content-header">
       <h1>
         日客资报表
-        <small><?php echo htmlentities($day); ?></small>
+        <small><?php echo htmlentities($area); ?>-<?php echo htmlentities($day); ?></small>
       </h1>
       <ol class="breadcrumb">
         <form class="form-inline" action="" method="get">

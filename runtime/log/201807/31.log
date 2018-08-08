@@ -1,0 +1,409 @@
+---------------------------------------------------------------
+[ 2018-07-31T15:33:32+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.028885s][吞吐率：34.62req/s] [内存消耗：1,191.82kb] [文件加载：55]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:33:32+08:00 ] 127.0.0.1 GET /login.html
+[ info ] idatamind.com/login.html [运行时间：0.024491s][吞吐率：40.83req/s] [内存消耗：1,120.21kb] [文件加载：53]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Login/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:42:52+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.033353s][吞吐率：29.98req/s] [内存消耗：1,191.95kb] [文件加载：55]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:42:52+08:00 ] 127.0.0.1 GET /login.html
+[ info ] idatamind.com/login.html [运行时间：0.023875s][吞吐率：41.88req/s] [内存消耗：1,120.21kb] [文件加载：53]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Login/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:43:02+08:00 ] 127.0.0.1 POST /admin/Login/check
+[ info ] idatamind.com/admin/Login/check [运行时间：0.178611s][吞吐率：5.60req/s] [内存消耗：2,145.84kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin/login/check',
+  'route' => 'admin/Login/check',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://idatamind.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'rayzxh@163.com',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003502s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009513s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000459s ]
+---------------------------------------------------------------
+[ 2018-07-31T15:43:03+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.696741s][吞吐率：1.44req/s] [内存消耗：1,413.95kb] [文件加载：59]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:43:10+08:00 ] 127.0.0.1 GET /users
+[ info ] idatamind.com/users [运行时间：0.021112s][吞吐率：47.37req/s] [内存消耗：946.19kb] [文件加载：48]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'users',
+  'route' => 'admin/User/users',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected ';'[E:\www\idatamind\application\admin\controller\User.php:85]
+---------------------------------------------------------------
+[ 2018-07-31T15:43:15+08:00 ] 127.0.0.1 GET /user
+[ info ] idatamind.com/user [运行时间：0.024100s][吞吐率：41.49req/s] [内存消耗：946.38kb] [文件加载：48]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user',
+  'route' => 'admin/User/one',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected ';'[E:\www\idatamind\application\admin\controller\User.php:85]
+---------------------------------------------------------------
+[ 2018-07-31T15:43:47+08:00 ] 127.0.0.1 GET /user
+[ info ] idatamind.com/user [运行时间：0.019464s][吞吐率：51.38req/s] [内存消耗：946.59kb] [文件加载：48]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user',
+  'route' => 'admin/User/one',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'default' (T_DEFAULT)[E:\www\idatamind\application\admin\controller\User.php:90]
+---------------------------------------------------------------
+[ 2018-07-31T15:44:23+08:00 ] 127.0.0.1 GET /user
+[ info ] idatamind.com/user [运行时间：0.029357s][吞吐率：34.06req/s] [内存消耗：1,488.30kb] [文件加载：63]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user',
+  'route' => 'admin/User/one',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\one.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-31T15:44:28+08:00 ] 127.0.0.1 GET /users
+[ info ] idatamind.com/users [运行时间：0.063703s][吞吐率：15.70req/s] [内存消耗：2,354.89kb] [文件加载：74]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'users',
+  'route' => 'admin/User/users',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ipcr2l9q4943t4tm1q308d7t55',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\user\users.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011851s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009029s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` WHERE  `id` > 1 LIMIT 1 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` > 1 LIMIT 0,20 [ RunTime:0.000375s ]
