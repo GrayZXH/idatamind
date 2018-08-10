@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2018 �?07 �?28 �?10:07
+-- 生成日期: 2018 �?08 �?10 �?10:42
 -- 服务器版本: 5.5.53
 -- PHP 版本: 5.6.27
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `channel` (
   `cgroup` varchar(50) DEFAULT NULL COMMENT '组',
   `store` varchar(50) DEFAULT NULL COMMENT '店铺ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 --
 -- 转存表中的数据 `channel`
@@ -73,7 +73,9 @@ INSERT INTO `channel` (`id`, `code`, `cname`, `status`, `cgroup`, `store`) VALUE
 (33, 'J44', '百度', '可用', '推广', '雅安'),
 (34, 'J28', '微信', '可用', '推广', '雅安'),
 (35, 'J35', '广点通', '可用', '推广', '雅安'),
-(36, 'J87', '抖音', '可用', '推广', '雅安');
+(36, 'J87', '抖音', '可用', '推广', '雅安'),
+(37, 'J7', '搜狗', '可用', '推广', '成都'),
+(38, 'J11', '微博', '可用', '推广', '成都');
 
 -- --------------------------------------------------------
 
