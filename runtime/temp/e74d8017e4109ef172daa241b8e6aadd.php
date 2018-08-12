@@ -1,4 +1,4 @@
-<?php /*a:2:{s:60:"E:\www\idatamind\application\admin\view\index\daydetail.html";i:1533734339;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
+<?php /*a:2:{s:60:"E:\www\idatamind\application\admin\view\index\daydetail.html";i:1534041477;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -336,11 +336,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </h1>
       <ol class="breadcrumb">
         <form class="form-inline" action="" method="get">
-		  <div class="form-group">
-		    <input type="text" name="day" class="form-control input-sm" id="datepicker" data-date-end-date="0d">
-		  </div>
-		  <button type="submit" class="btn btn-default btn-sm">查询</button>
-		</form>
+    		  <div class="form-group">
+    		    <input type="text" name="day" class="form-control input-sm" id="datepicker" data-date-end-date="0d">
+            <input type="text" name="area" value="<?php echo htmlentities($area); ?>" style="display: none;">
+    		  </div>
+    		  <button type="submit" class="btn btn-default btn-sm">查询</button>
+		    </form>
       </ol>
     </section>
 

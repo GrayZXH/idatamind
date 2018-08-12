@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1532759621;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1532504817;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1534042487;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -291,9 +291,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">成都</a></li>
-            <li><a href="#">雅安</a></li>
-            <li><a href="#">眉山</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=cd">成都</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ya">雅安</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ms">眉山</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -356,8 +356,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <input type="text" class="form-control" id="Nikename" name="username" placeholder="Nikename" value="<?php echo htmlentities($user['username']); ?>">
                 </div>
                 <div class="form-group">
-                  <label for="Email1">邮箱</label>
-                  <input type="email" class="form-control" id="Email1" name="email" placeholder="Enter email" value="<?php echo htmlentities($user['email']); ?>">
+                  <label for="Email">邮箱</label>
+                  <input type="email" class="form-control" id="Email" name="email" placeholder="Enter email" value="<?php echo htmlentities($user['email']); ?>">
                 </div>
                 <div class="form-group">
                   <label for="Password">密码</label>

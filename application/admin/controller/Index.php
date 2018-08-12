@@ -55,44 +55,41 @@ class Index extends Common
         //$this->assign('source',$source);
         //$this->assign('hq',$hq);
 
-
-
-
         //return $this->fetch();
     }
     public function daydetail()
     {
-        //$source=modelChannel::where('status','可用')->column('code');
-        $area=Request::get('area','cd');
-            switch ($area) {
-                case 'cd':
-                    $source = modelChannel::where([
-                        ['store','=','成都'],
-                        ['status','=','可用']
-                    ])->column('code');
-                    break;
-                case 'ya':
-                    $source = modelChannel::where([
-                        ['store','=','雅安'],
-                        ['status','=','可用']
-                    ])->column('code');
-                    break;
-                case 'ms':
-                    $source = modelChannel::where([
-                        ['store','=','眉山'],
-                        ['status','=','可用']
-                    ])->column('code');
-                    break;
-
-                default:
-                    $source = modelChannel::where([
-                        ['store','=','成都'],
-                        ['status','=','可用']
-                    ])->column('code');
-                    break;
-        }
         $day=Request::get('day',date("Y-m-d"));
-        $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
+        $area=Request::get('area','cd');
+        switch ($area) {
+            case 'cd':
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ya':
+                $source = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ms':
+                $source = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+
+            default:
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+        }
+        
+        $date='b='.$day.',e='.$day;
         $data = array('list_cjrq' => $date,'pageSize'=>1000);
         $rs=get_xs_data($data)['result'];
         $result='';
@@ -143,8 +140,8 @@ class Index extends Common
         $date='b='.Request::get('day',date("Y-m-d")).',e='.Request::get('day',date("Y-m-d"));
         //$date='b=2018-07-26,e=2018-07-31';
         $day=Request::get('day',date("Y-m-d"));
-        //$area=Request::get('area','cd');
-        /*switch ($area) {
+        $area=Request::get('area','cd');
+        switch ($area) {
             case 'cd':
                 $source = modelChannel::where([
                     ['store','=','成都'],
@@ -170,7 +167,7 @@ class Index extends Common
                     ['status','=','可用']
                 ])->column('code');
                 break;
-        }*/
+        }
 
         $source=modelChannel::where('status','可用')->column('code');
         $hq = array();
