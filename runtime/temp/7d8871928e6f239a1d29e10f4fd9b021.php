@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1534042487;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
+<?php /*a:2:{s:54:"E:\www\idatamind\application\admin\view\user\edit.html";i:1534131070;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -414,11 +414,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="form-group">
                 <label>选取渠道</label>
                 <select name="channel[]" class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
-                  <?php foreach($channel as $vo): if(empty($owner) || (($owner instanceof \think\Collection || $owner instanceof \think\Paginator ) && $owner->isEmpty())): ?>
+                  <?php foreach($channel as $vo): if(in_array(($vo), is_array($owner)?$owner:explode(',',$owner))): ?>
+                      <option selected><?php echo htmlentities($vo); ?></option>
+                    <?php else: ?>
                       <option><?php echo htmlentities($vo); ?></option>
-                    <?php else: foreach($owner as $ow): if($ow == $vo): ?><option selected><?php echo htmlentities($vo); ?></option>
-                        <?php else: ?><option><?php echo htmlentities($vo); ?></option>
-                        <?php endif; endforeach; endif; endforeach; ?>
+                    <?php endif; endforeach; ?>
                 </select>
               </div>
               </div>

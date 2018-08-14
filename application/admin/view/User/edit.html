@@ -90,15 +90,13 @@
                 <label>选取渠道</label>
                 <select name="channel[]" class="form-control select2" multiple="multiple" data-placeholder="点击开始选择"style="width: 100%;">
                   {foreach $channel as $vo } 
-                    {empty name="owner"}
+                    
+                    {in name="$vo" value="$owner"}
+                      <option selected>{$vo}</option>
+                    {else/}
                       <option>{$vo}</option>
-                    {else /}
-                      {foreach $owner as $ow}
-                        {if $ow == $vo}<option selected>{$vo}</option>
-                        {else /}<option>{$vo}</option>
-                        {/if}
-                      {/foreach}
-                    {/empty}
+                    {/in}
+                    
                   {/foreach}
                 </select>
               </div>

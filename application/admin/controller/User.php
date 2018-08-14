@@ -64,10 +64,12 @@ class User extends Common
                 $select['user_status']=Selectoptions::where('user_status','<>',null)->column('user_status');
                 $select['user_role']=Selectoptions::where('user_role','<>',null)->column('user_role');
                 $owner = Channelowner::where('uid','=',$id)->column('code');//获取此用户拥有的所有渠道
-                $owner1=explode(",",$owner[0]);
-                var_dump($owner);
-                echo "<br>";
-                var_dump($owner1);
+                if ($owner) {
+                    $owner=explode(",",$owner[0]);
+                }else{
+                    $owner = array();
+                }
+                
                 $this->assign('owner',$owner);
             }else{
                 $this->redirect('admin/User/users');
@@ -87,14 +89,15 @@ class User extends Common
 
                 case 'editchannel':
                     $channelstr=implode(",",$_POST['channel']);
-                    $owner = Channelowner::where('uid', $id)->find();
-                    if ($owner) {
-                        $owner->code     = $channelstr;
-                        $owner->save();
+                    $owner1 = Channelowner::where('uid', $id)->find();
+                    if ($owner1) {
+                        $owner1->code     = $channelstr;
+                        $owner1->save();
                     }else{
-                        $owner           = new Channelowner;
-                        $owner->code     = $channelstr;
-                        $owner->save();
+                        $owner2           = new Channelowner;
+                        $owner2->code     = $channelstr;
+                        $owner2->uid      = $id;
+                        $owner2->save();
                         }
                     break;
 
