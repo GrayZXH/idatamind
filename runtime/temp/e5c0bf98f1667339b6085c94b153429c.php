@@ -1,4 +1,4 @@
-<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1532059115;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
+<?php /*a:2:{s:57:"E:\www\idatamind\application\admin\view\index\source.html";i:1534040008;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from

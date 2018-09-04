@@ -39,23 +39,236 @@ class Index extends Common
         print_r($kh);
         //return $this->fetch();
     }
-    public function week()
-    {
-        $date='b='.Request::get('b',date("Y-m-d")).',e='.Request::get('e',date("Y-m-d"));
+    public function test(){
+        //$jsessionid=get_cookie();
+        //Session::set('jsessionid',$jsessionid);
+        $area=Request::get('area','cd');
+        $day='b='.date("Y-m-d").',e='.date("Y-m-d");
+        $date=Request::get('date',$day);
+        switch ($area) {
+            case 'cd':
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ya':
+                $source = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ms':
+                $source = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
 
-        $source = array('J1','J2','J3','J4','J5','J6','J7','J8','J9' );
-
-        $num = count($source);
-        for ($i=0; $i < $num; $i++) { 
-            $data[$i]=array('list_cjrq'=>$date,'list_source'=> $source[$i]);
-            $hq[$i]=get_xs_data($data[$i]);
+            default:
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+        }
+        $data = array('list_cjrq' => $date,'pageSize'=>10000);
+        $rs=get_kh_data($data)['result'];
+        
+        $result = array();
+        foreach ($source as  $qd) {
+            foreach ($rs as $value) {
+                if ($qd==$value['source']) {
+                    switch ($value['grade']) {
+                        case 'A类 一个月':
+                            if (isset($result[$qd]['a'])) {
+                                $result[$qd]['a']+=1;
+                            }else{
+                                $result[$qd]['a']=1;
+                            }
+                            break;
+                        case 'B类 两个月':
+                            if (isset($result[$qd]['b'])) {
+                                $result[$qd]['b']+=1;
+                            }else{
+                                $result[$qd]['b']=1;
+                            }
+                            break;
+                        case 'C类 三个月':
+                            if (isset($result[$qd]['c'])) {
+                                $result[$qd]['c']+=1;
+                            }else{
+                                $result[$qd]['c']=1;
+                            }
+                            break;
+                        case 'D类 半年内拍':
+                            if (isset($result[$qd]['d'])) {
+                                $result[$qd]['d']+=1;
+                            }else{
+                                $result[$qd]['d']=1;
+                            }
+                            break;
+                        case 'E类 一年内拍':
+                            if (isset($result[$qd]['e'])) {
+                                $result[$qd]['e']+=1;
+                            }else{
+                                $result[$qd]['e']=1;
+                            }
+                            break;
+                        case 'F类 两年内拍':
+                            if (isset($result[$qd]['f'])) {
+                                $result[$qd]['f']+=1;
+                            }else{
+                                $result[$qd]['f']=1;
+                            }
+                            break;
+                        default:
+                            if (isset($result[$qd]['z'])) {
+                                $result[$qd]['z']+=1;
+                            }else{
+                                $result[$qd]['z']=1;
+                            }
+                            break;
+                    }
+                }
+            }
+            if (!isset($result[$qd])) {
+                $result[$qd]['a']=0;
+                $result[$qd]['b']=0;
+                $result[$qd]['c']=0;
+                $result[$qd]['d']=0;
+                $result[$qd]['e']=0;
+                $result[$qd]['f']=0;
+                $result[$qd]['z']=0;
+            }
         }
 
-        var_dump($hq);
-        //$this->assign('source',$source);
-        //$this->assign('hq',$hq);
+        //print_r($result);
+        
 
-        //return $this->fetch();
+
+
+
+
+        $this->assign('area',$area);
+        $this->assign('day',$date);
+        $this->assign('result',$result);
+        return $this->fetch();
+    }
+    public function week()
+    {   
+        $area=Request::get('area','cd');
+        $day='b='.date("Y-m-d").',e='.date("Y-m-d");
+        $date=Request::get('date',$day);
+        switch ($area) {
+            case 'cd':
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ya':
+                $source = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ms':
+                $source = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+
+            default:
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+        }
+        $data = array('list_cjrq' => $date,'pageSize'=>10000);
+        $rs=get_kh_data($data)['result'];
+        
+        $result = array();
+        foreach ($source as  $qd) {
+            foreach ($rs as $value) {
+                if ($qd==$value['source']) {
+                    switch ($value['grade']) {
+                        case 'A类 一个月':
+                            if (isset($result[$qd]['a'])) {
+                                $result[$qd]['a']+=1;
+                            }else{
+                                $result[$qd]['a']=1;
+                            }
+                            break;
+                        case 'B类 两个月':
+                            if (isset($result[$qd]['b'])) {
+                                $result[$qd]['b']+=1;
+                            }else{
+                                $result[$qd]['b']=1;
+                            }
+                            break;
+                        case 'C类 三个月':
+                            if (isset($result[$qd]['c'])) {
+                                $result[$qd]['c']+=1;
+                            }else{
+                                $result[$qd]['c']=1;
+                            }
+                            break;
+                        case 'D类 半年内拍':
+                            if (isset($result[$qd]['d'])) {
+                                $result[$qd]['d']+=1;
+                            }else{
+                                $result[$qd]['d']=1;
+                            }
+                            break;
+                        case 'E类 一年内拍':
+                            if (isset($result[$qd]['e'])) {
+                                $result[$qd]['e']+=1;
+                            }else{
+                                $result[$qd]['e']=1;
+                            }
+                            break;
+                        case 'F类 两年内拍':
+                            if (isset($result[$qd]['f'])) {
+                                $result[$qd]['f']+=1;
+                            }else{
+                                $result[$qd]['f']=1;
+                            }
+                            break;
+                        default:
+                            if (isset($result[$qd]['z'])) {
+                                $result[$qd]['z']+=1;
+                            }else{
+                                $result[$qd]['z']=1;
+                            }
+                            break;
+                    }
+                }
+            }
+            if (!isset($result[$qd])) {
+                $result[$qd]['a']=0;
+                $result[$qd]['b']=0;
+                $result[$qd]['c']=0;
+                $result[$qd]['d']=0;
+                $result[$qd]['e']=0;
+                $result[$qd]['f']=0;
+                $result[$qd]['z']=0;
+            }
+        }
+
+        //print_r($result);
+        
+
+
+
+
+
+        $this->assign('area',$area);
+        $this->assign('day',$date);
+        $this->assign('result',$result);
+        return $this->fetch();
     }
     public function daydetail()
     {

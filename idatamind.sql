@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2018 �?08 �?10 �?10:42
+-- 生成日期: 2018 �?09 �?04 �?06:41
 -- 服务器版本: 5.5.53
 -- PHP 版本: 5.6.27
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `channel` (
   `cgroup` varchar(50) DEFAULT NULL COMMENT '组',
   `store` varchar(50) DEFAULT NULL COMMENT '店铺ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- 转存表中的数据 `channel`
@@ -75,7 +75,9 @@ INSERT INTO `channel` (`id`, `code`, `cname`, `status`, `cgroup`, `store`) VALUE
 (35, 'J35', '广点通', '可用', '推广', '雅安'),
 (36, 'J87', '抖音', '可用', '推广', '雅安'),
 (37, 'J7', '搜狗', '可用', '推广', '成都'),
-(38, 'J11', '微博', '可用', '推广', '成都');
+(38, 'J11', '微博', '可用', '推广', '成都'),
+(39, 'J46', '信息流', '可用', '推广', '成都'),
+(40, 'J93', '其他', '可用', '推广', '成都');
 
 -- --------------------------------------------------------
 
@@ -88,14 +90,16 @@ CREATE TABLE IF NOT EXISTS `channelowner` (
   `uid` int(9) unsigned NOT NULL COMMENT '所属用户',
   `code` varchar(1000) NOT NULL COMMENT '渠道编码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `channelowner`
 --
 
 INSERT INTO `channelowner` (`id`, `uid`, `code`) VALUES
-(1, 3, 'J2');
+(1, 3, 'J2,J27,J26'),
+(6, 4, 'J1,J6'),
+(7, 5, 'J6,J4,J41,J7');
 
 -- --------------------------------------------------------
 
@@ -193,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `selectoptions` (
 --
 
 INSERT INTO `selectoptions` (`id`, `user_group`, `user_role`, `user_status`) VALUES
-(1, '总店', NULL, NULL),
+(1, '成都', NULL, NULL),
 (2, '眉山', NULL, NULL),
 (3, '雅安', NULL, NULL),
 (4, '未分组', NULL, NULL),
@@ -220,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `phone` varchar(20) DEFAULT NULL,
   `role` varchar(50) DEFAULT NULL COMMENT '角色',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- 转存表中的数据 `user`
@@ -228,17 +232,16 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `email`, `password`, `username`, `ugroup`, `status`, `phone`, `role`) VALUES
 (1, 'rayzxh@163.com', '123456', 'Ray', '未分组', '可用', NULL, '超级管理员'),
-(2, '937349996@qq.com', '1234566666789.', 'zxh', '总店', '可用', NULL, '推广'),
-(3, NULL, '123', '周光怡', '总店', '可用', NULL, '推广'),
-(4, NULL, '123', '叶文斌', '总店', '可用', NULL, '推广'),
-(5, NULL, '123', '文豪', '总店', '可用', NULL, '推广'),
-(6, NULL, '123', '孙增飞', '总店', '可用', NULL, '推广'),
-(7, NULL, '123', '文红春', '总店', '可用', NULL, '推广'),
-(8, NULL, '123', '郭峰', '总店', '可用', NULL, '推广'),
-(9, NULL, '123', '李韩', '总店', '可用', NULL, '推广'),
-(10, NULL, '123', '胥兰', '总店', '可用', NULL, '推广'),
-(11, NULL, '123', '刘吟', '未分组', '可用', NULL, '管理员'),
-(12, NULL, '123', 'JFR', '未分组', '可用', NULL, '管理员');
+(2, '937349996@qq.com', '1234566666789.', 'zxh', '成都', '可用', NULL, '推广'),
+(3, NULL, '123', '周光怡', '成都', '可用', NULL, '推广'),
+(4, NULL, '123', '叶文斌', '成都', '可用', NULL, '推广'),
+(5, NULL, '123', '文豪', '成都', '可用', NULL, '推广'),
+(6, NULL, '123', '孙增飞', '成都', '可用', NULL, '推广'),
+(7, NULL, '123', '文红春', '成都', '可用', NULL, '推广'),
+(8, NULL, '123', '郭峰', '成都', '可用', NULL, '推广'),
+(9, NULL, '123', '李韩', '成都', '可用', NULL, '推广'),
+(10, NULL, '123', '胥兰', '成都', '可用', NULL, '推广'),
+(11, NULL, '123', '刘吟', '未分组', '可用', NULL, '管理员');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -18,12 +18,10 @@ Route::get('hello/:name', 'index/hello');
 Route::get('login', 'admin/Login/index');
 Route::post('admin/login/check', 'admin/Login/check');
 
-
-Route::get('test', 'admin/Test/index');
-
 Route::get('', 'admin/Index/index');
 Route::get('today', 'admin/Index/day');
 Route::get('week', 'admin/Index/week');
+Route::get('test', 'admin/Index/test');
 Route::get('daydetail', 'admin/Index/daydetail');
 Route::get('source', 'admin/Index/source');
 
@@ -37,6 +35,9 @@ Route::get('admin/user/delete', 'admin/User/delete');//添加用户
 Route::get('channel', 'admin/Channel/index');
 Route::post('admin/channel/add', 'admin/Channel/add');
 Route::get('admin/channel/delete', 'admin/Channel/delete');
+
+Route::get('abc', 'admin/Test/abc');//获取客户ABC分布
+Route::get('day', 'admin/Test/day');//获取每日客资情况
 
 return [
 ];

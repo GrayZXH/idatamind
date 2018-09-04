@@ -1,4 +1,4 @@
-<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\index\week.html";i:1530960526;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1531489472;}*/ ?>
+<?php /*a:2:{s:55:"E:\www\idatamind\application\admin\view\index\week.html";i:1535722966;s:49:"E:\www\idatamind\application\admin\view\base.html";i:1533734121;}*/ ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>Index</title>
+  <title>ABC统计</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -17,18 +17,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/font-awesome/css/font-awesome.min.css " />
   <!-- Ionicons -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/Ionicons/css/ionicons.min.css " />
-
-  
-
-  
-
+  <!-- select2 -->
+  <link rel="stylesheet" type="text/css"  href="/static/admin/bower_components/select2/dist/css/select2.min.css" />
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/AdminLTE.min.css " />
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" type="text/css"  href="/static/admin/dist/css/skins/skin-red.min.css " />
-
+  
+  
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -248,7 +246,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Sidebar Menu</li>
         <!-- Optionally, you can add icons to the links -->
-         <li class="treeview active">
+         <li class="treeview">
           <a href="#"><i class="fa fa-line-chart"></i> <span>日数据</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -291,14 +289,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">成都</a></li>
-            <li><a href="#">雅安</a></li>
-            <li><a href="#">眉山</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=cd">成都</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ya">雅安</a></li>
+            <li><a href="<?php echo url('admin/Index/daydetail'); ?>?area=ms">眉山</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-users"></i> <span>渠道管理</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=cd">成都</a></li>
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=ya">雅安</a></li>
+            <li><a href="<?php echo url('admin/Channel/index'); ?>?area=ms">眉山</a></li>
           </ul>
         </li>
 
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>区间报表</span></a></li>
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
+        <li><a href="<?php echo url('admin/User/users'); ?>"><i class="fa fa-line-chart"></i> <span>用户管理</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>个人中心</span></a></li>
         <li><a href="#"><i class="fa fa-line-chart"></i> <span>系统设置</span></a></li>
       </ul>
@@ -313,10 +323,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
      
     <section class="content-header">
       <h1>
-        上周数据
-        <small>Month Data</small>
+        ABC报表
+        <small><?php echo htmlentities($area); ?>-<?php echo htmlentities($day); ?></small>
       </h1>
+      <ol class="breadcrumb">
+        hello
+      </ol>
     </section>
+
     
 
     <!-- Main content -->
@@ -327,172 +341,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
         -------------------------->
       
 
-<div class="row">
-	<div class="col-lg-3 col-xs-6">
-		<!-- small box -->
-		<div class="small-box bg-aqua">
-			<div class="inner">
-				<h3>150</h3>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tr>
+    	<td>渠道</td>
+	    <td>A</td>
+	    <td>B</td>
+	    <td>C</td>
+	    <td>D</td>
+      <td>E</td>
+      <td>F</td>
+      <td>未填</td>
+    </tr>
+    <?php foreach($result as $key=>$vo): ?> 
+      <tr>
+        <td><?php echo htmlentities($key); ?></td>
+        <td><?php echo $a=(isset($vo['a'])?$vo['a']:0) ?></td>
+        <td><?php echo $b=(isset($vo['b'])?$vo['b']:0) ?></td>
+        <td><?php echo $c=(isset($vo['c'])?$vo['c']:0) ?></td>
+        <td><?php echo $d=(isset($vo['d'])?$vo['d']:0) ?></td>
+        <td><?php echo $e=(isset($vo['e'])?$vo['e']:0) ?></td>
+        <td><?php echo $f=(isset($vo['f'])?$vo['f']:0) ?></td>
+        <td><?php echo $z=(isset($vo['z'])?$vo['z']:0) ?></td>
+      </tr>
+    <?php endforeach; ?>
+    
 
-				<p>套总</p>
-			</div>
-			<div class="icon">
-				<i class="ion ion-bag"></i>
-			</div>
-			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-	</div>
-	<!-- ./col -->
-	<div class="col-lg-3 col-xs-6">
-		<!-- small box -->
-		<div class="small-box bg-yellow">
-			<div class="inner">
-				<h3>44</h3>
+	    
 
-				<p>花费</p>
-			</div>
-			<div class="icon">
-				<i class="ion ion-person-add"></i>
-			</div>
-			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-	</div>
-	<!-- ./col -->
-	<div class="col-lg-3 col-xs-6">
-		<!-- small box -->
-		<div class="small-box bg-red">
-			<div class="inner">
-				<h3>65</h3>
-
-				<p>成交量</p>
-			</div>
-			<div class="icon">
-				<i class="ion ion-pie-graph"></i>
-			</div>
-			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-	</div>
-	<!-- ./col -->
-	<div class="col-lg-3 col-xs-6">
-		<!-- small box -->
-		<div class="small-box bg-green">
-			<div class="inner">
-				<h3>53<sup style="font-size: 20px">%</sup></h3>
-
-				<p>ROI</p>
-			</div>
-			<div class="icon">
-				<i class="ion ion-stats-bars"></i>
-			</div>
-			<a href="#" class="small-box-footer">查看详情 <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-	</div>
-	<!-- ./col -->
-</div>
-
-<div class="row">
-	<div class="col-md-3 col-sm-6 col-xs-12">
-		<div class="info-box bg-aqua">
-			<span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
-
-			<div class="info-box-content">
-				<span class="info-box-text">获取</span>
-				<span class="info-box-number">41,410</span>
-
-				<div class="progress">
-					<div class="progress-bar" style="width: 100%"></div>
-				</div>
-				<span class="progress-description">
-					70% Increase in 30 Days
-				</span>
-			</div>
-			<!-- /.info-box-content -->
-		</div>
-		<!-- /.info-box -->
-	</div>
-	<!-- /.col -->
-	<div class="col-md-3 col-sm-6 col-xs-12">
-		<div class="info-box bg-green">
-			<span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
-
-			<div class="info-box-content">
-				<span class="info-box-text">有效</span>
-				<span class="info-box-number">41,410</span>
-
-				<div class="progress">
-					<div class="progress-bar" style="width: 70%"></div>
-				</div>
-				<span class="progress-description">
-					70% Increase in 30 Days
-				</span>
-			</div>
-			<!-- /.info-box-content -->
-		</div>
-		<!-- /.info-box -->
-	</div>
-	<!-- /.col -->
-	<div class="col-md-3 col-sm-6 col-xs-12">
-		<div class="info-box bg-yellow">
-			<span class="info-box-icon"><i class="fa fa-calendar"></i></span>
-
-			<div class="info-box-content">
-				<span class="info-box-text">待定</span>
-				<span class="info-box-number">41,410</span>
-
-				<div class="progress">
-					<div class="progress-bar" style="width: 70%"></div>
-				</div>
-				<span class="progress-description">
-					70% Increase in 30 Days
-				</span>
-			</div>
-			<!-- /.info-box-content -->
-		</div>
-		<!-- /.info-box -->
-	</div>
-	<!-- /.col -->
-	<div class="col-md-3 col-sm-6 col-xs-12">
-		<div class="info-box bg-red">
-			<span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-
-			<div class="info-box-content">
-				<span class="info-box-text">有效率</span>
-				<span class="info-box-number">41,410</span>
-
-				<div class="progress">
-					<div class="progress-bar" style="width: 70%"></div>
-				</div>
-				<span class="progress-description">
-					70% Increase in 30 Days
-				</span>
-			</div>
-			<!-- /.info-box-content -->
-		</div>
-		<!-- /.info-box -->
-	</div>
-	<!-- /.col -->
+  </table>
 </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
     </section>
     <!-- /.content -->
@@ -597,7 +479,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-primary" id="#confirm" >确认</button>
         </div>
       </div>
     </div>
