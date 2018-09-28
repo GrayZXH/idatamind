@@ -20,7 +20,6 @@ Route::post('admin/login/check', 'admin/Login/check');
 
 Route::get('', 'admin/Index/index');
 Route::get('today', 'admin/Index/day');
-Route::get('week', 'admin/Index/week');
 Route::get('test', 'admin/Index/test');
 Route::get('daydetail', 'admin/Index/daydetail');
 Route::get('source', 'admin/Index/source');
@@ -38,6 +37,7 @@ Route::get('admin/channel/delete', 'admin/Channel/delete');
 
 Route::get('abc', 'admin/Test/abc');//获取客户ABC分布
 Route::get('day', 'admin/Test/day');//获取每日客资情况
+Route::get('week', 'admin/Test/week');//获取每日客资情况
 
 return [
 ];

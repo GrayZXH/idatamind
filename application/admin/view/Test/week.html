@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WEEK/Test</title>
+</head>
+<body>
+    <div>
+  <table>
+    <tr>
+        <td>获取</td>
+        <td>有效</td>
+        <td>无效</td>
+        <td>待定</td>
+    </tr>
+    
+    {foreach $result as $key=>$vo } 
+    <tr>
+        <td>{$key}</td>
+        <td>{php}echo $hq=(isset($vo['hq'])?$vo['hq']:0){/php}</td>
+        <td>{php}echo $yx=(isset($vo['yx'])?$vo['yx']:0){/php}</td>
+        <td>{php}echo $wx=(isset($vo['wx'])?$vo['wx']:0){/php}</td>
+        <td>{php}echo $dd=$hq-$yx-$wx{/php}</td>
+    </tr>
+    {/foreach}
+    
+      
+
+  </table>
+</div>
+</body>
+</html>

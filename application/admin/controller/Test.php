@@ -201,4 +201,80 @@ class Test extends Controller
         $this->assign('result',$result);
         return $this->fetch();
     }
+    public function week()
+    {
+        $jsessionid=get_cookie();
+        Session::set('jsessionid',$jsessionid);
+        $b=Request::get('b',date("Y-m-d"));
+        $e=Request::get('e',date("Y-m-d"));
+        $area=Request::get('area','cd');
+        switch ($area) {
+            case 'cd':
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ya':
+                $source = modelChannel::where([
+                    ['store','=','雅安'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+            case 'ms':
+                $source = modelChannel::where([
+                    ['store','=','眉山'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+
+            default:
+                $source = modelChannel::where([
+                    ['store','=','成都'],
+                    ['status','=','可用']
+                ])->column('code');
+                break;
+        }
+        
+        $date='b='.$b.',e='.$e;
+        $data = array('list_cjrq' => $date,'pageSize'=>10000);
+        $rs=get_xs_data($data)['result'];
+        $result='';
+        foreach ($source as  $qd) {
+            foreach ($rs as $value) {
+                if ($qd==$value['source']) {
+                    if (isset($result[$qd]['hq'])) {
+                        $result[$qd]['hq']+=1;
+                    }else{
+                        $result[$qd]['hq']=1;
+                    }
+                    if ($value['status']=='转为客户') {
+                        if (isset($result[$qd]['yx'])) {
+                            $result[$qd]['yx']+=1;
+                        }else{
+                            $result[$qd]['yx']=1;
+                        }
+                    }
+                    if ($value['status']=='无效') {
+                        if (isset($result[$qd]['wx'])) {
+                            $result[$qd]['wx']+=1;
+                        }else{
+                            $result[$qd]['wx']=1;
+                        }
+                    }
+                }
+            }
+            if (!isset($result[$qd])) {
+                $result[$qd]['hq']=0;
+                $result[$qd]['yx']=0;
+                $result[$qd]['wx']=0;
+            }
+        }
+
+
+        $this->assign('result',$result);
+        
+
+        return $this->fetch();
+    }
 }

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------
-[ 2018-09-04T13:53:18+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
-[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：0.239291s][吞吐率：4.18req/s] [内存消耗：2,197.27kb] [文件加载：71]
+[ 2018-09-05T13:47:58+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
+[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：2.728741s][吞吐率：0.37req/s] [内存消耗：2,174.62kb] [文件加载：68]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'day',
@@ -19,141 +19,6 @@
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
   'upgrade-insecure-requests' => '1',
-  'connection' => 'close',
-  'host' => 'idatamind.com',
-)
-[ info ] [ PARAM ] array (
-  'day' => '2018-09-02',
-  'area' => 'cd',
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-  'httponly' => true,
-  'secure' => false,
-)
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001886s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.045291s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000475s ]
-[ error ] [2]Invalid argument supplied for foreach()[E:\www\idatamind\application\admin\controller\Test.php:47]
----------------------------------------------------------------
-[ 2018-09-04T13:53:31+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
-[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：0.165742s][吞吐率：6.03req/s] [内存消耗：2,197.80kb] [文件加载：71]
-[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'rule' => 'day',
-  'route' => 'admin/Test/day',
-  'option' => 
-  array (
-    'merge_rule_regex' => false,
-  ),
-  'var' => 
-  array (
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'close',
-  'host' => 'idatamind.com',
-)
-[ info ] [ PARAM ] array (
-  'day' => '2018-09-02',
-  'area' => 'cd',
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-  'httponly' => true,
-  'secure' => false,
-)
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007587s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000538s ]
-[ error ] [2]Invalid argument supplied for foreach()[E:\www\idatamind\application\admin\controller\Test.php:47]
----------------------------------------------------------------
-[ 2018-09-04T13:53:44+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
-[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：0.176741s][吞吐率：5.66req/s] [内存消耗：2,197.80kb] [文件加载：71]
-[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'rule' => 'day',
-  'route' => 'admin/Test/day',
-  'option' => 
-  array (
-    'merge_rule_regex' => false,
-  ),
-  'var' => 
-  array (
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'close',
-  'host' => 'idatamind.com',
-)
-[ info ] [ PARAM ] array (
-  'day' => '2018-09-02',
-  'area' => 'cd',
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-  'httponly' => true,
-  'secure' => false,
-)
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000889s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007553s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000406s ]
-[ error ] [2]Invalid argument supplied for foreach()[E:\www\idatamind\application\admin\controller\Test.php:47]
----------------------------------------------------------------
-[ 2018-09-04T13:54:31+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
-[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：2.159513s][吞吐率：0.46req/s] [内存消耗：2,175.10kb] [文件加载：68]
-[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'rule' => 'day',
-  'route' => 'admin/Test/day',
-  'option' => 
-  array (
-    'merge_rule_regex' => false,
-  ),
-  'var' => 
-  array (
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'close',
   'host' => 'idatamind.com',
 )
@@ -177,12 +42,60 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010360s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007107s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000529s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001443s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.028343s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000472s ]
 ---------------------------------------------------------------
-[ 2018-09-04T13:54:58+08:00 ] 127.0.0.1 GET /
-[ info ] idatamind.com/ [运行时间：0.129450s][吞吐率：7.72req/s] [内存消耗：1,222.37kb] [文件加载：55]
+[ 2018-09-05T13:48:11+08:00 ] 127.0.0.1 GET /day?day=2018-09-04&area=cd
+[ info ] idatamind.com/day?day=2018-09-04&area=cd [运行时间：2.095447s][吞吐率：0.48req/s] [内存消耗：2,174.52kb] [文件加载：68]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'day',
+  'route' => 'admin/Test/day',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'day' => '2018-09-04',
+  'area' => 'cd',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\test\day.html [ array (
+  0 => 'area',
+  1 => 'day',
+  2 => 'result',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000736s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007551s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000445s ]
+---------------------------------------------------------------
+[ 2018-09-05T13:48:48+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.042577s][吞吐率：23.49req/s] [内存消耗：1,222.37kb] [文件加载：55]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => '',
@@ -196,7 +109,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -218,8 +131,8 @@
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
-[ 2018-09-04T13:54:58+08:00 ] 127.0.0.1 GET /login.html
-[ info ] idatamind.com/login.html [运行时间：0.035868s][吞吐率：27.88req/s] [内存消耗：1,122.75kb] [文件加载：53]
+[ 2018-09-05T13:48:48+08:00 ] 127.0.0.1 GET /login.html
+[ info ] idatamind.com/login.html [运行时间：0.086431s][吞吐率：11.57req/s] [内存消耗：1,122.75kb] [文件加载：53]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'login',
@@ -233,7 +146,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -257,8 +170,8 @@
 ) ]
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
-[ 2018-09-04T13:55:07+08:00 ] 127.0.0.1 POST /admin/Login/check
-[ info ] idatamind.com/admin/Login/check [运行时间：0.187248s][吞吐率：5.34req/s] [内存消耗：2,148.10kb] [文件加载：67]
+[ 2018-09-05T13:48:58+08:00 ] 127.0.0.1 POST /admin/Login/check
+[ info ] idatamind.com/admin/Login/check [运行时间：0.199701s][吞吐率：5.01req/s] [内存消耗：2,148.10kb] [文件加载：67]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'admin/login/check',
@@ -272,7 +185,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://idatamind.com/login.html',
@@ -300,12 +213,12 @@
   'secure' => false,
 )
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.009724s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.028506s ]
-[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.042564s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000397s ]
 ---------------------------------------------------------------
-[ 2018-09-04T13:55:08+08:00 ] 127.0.0.1 GET /
-[ info ] idatamind.com/ [运行时间：0.309058s][吞吐率：3.24req/s] [内存消耗：1,443.93kb] [文件加载：59]
+[ 2018-09-05T13:48:58+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.307745s][吞吐率：3.25req/s] [内存消耗：1,443.93kb] [文件加载：59]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => '',
@@ -319,7 +232,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://idatamind.com/login.html',
@@ -342,8 +255,8 @@
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
-[ 2018-09-04T13:55:14+08:00 ] 127.0.0.1 GET /daydetail
-[ info ] idatamind.com/daydetail [运行时间：0.822018s][吞吐率：1.22req/s] [内存消耗：2,306.76kb] [文件加载：72]
+[ 2018-09-05T13:49:44+08:00 ] 127.0.0.1 GET /daydetail
+[ info ] idatamind.com/daydetail [运行时间：0.992580s][吞吐率：1.01req/s] [内存消耗：2,307.20kb] [文件加载：72]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'daydetail',
@@ -357,7 +270,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -384,12 +297,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.017075s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000420s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010007s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.012019s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000388s ]
 ---------------------------------------------------------------
-[ 2018-09-04T13:55:48+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-03&area=cd
-[ info ] idatamind.com/daydetail?day=2018-09-03&area=cd [运行时间：1.818662s][吞吐率：0.55req/s] [内存消耗：2,308.00kb] [文件加载：72]
+[ 2018-09-05T13:49:50+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-04&area=cd
+[ info ] idatamind.com/daydetail?day=2018-09-04&area=cd [运行时间：2.045079s][吞吐率：0.49req/s] [内存消耗：2,307.78kb] [文件加载：72]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'daydetail',
@@ -403,7 +316,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://idatamind.com/daydetail',
@@ -414,7 +327,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'cd',
 )
 [ info ] [ SESSION ] INIT array (
@@ -433,12 +346,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.009921s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008440s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000513s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000725s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.036482s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000453s ]
 ---------------------------------------------------------------
-[ 2018-09-04T14:07:37+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-03&area=ms
-[ info ] idatamind.com/daydetail?day=2018-09-03&area=ms [运行时间：2.174824s][吞吐率：0.46req/s] [内存消耗：2,301.76kb] [文件加载：72]
+[ 2018-09-05T13:51:38+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-04&area=ms
+[ info ] idatamind.com/daydetail?day=2018-09-04&area=ms [运行时间：2.055754s][吞吐率：0.49req/s] [内存消耗：2,301.66kb] [文件加载：72]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'daydetail',
@@ -452,7 +365,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -462,7 +375,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'ms',
 )
 [ info ] [ SESSION ] INIT array (
@@ -481,12 +394,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001350s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.009038s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '眉山'  AND `status` = '可用' [ RunTime:0.000484s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000888s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.021743s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '眉山'  AND `status` = '可用' [ RunTime:0.000419s ]
 ---------------------------------------------------------------
-[ 2018-09-04T14:09:00+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-03&area=ya
-[ info ] idatamind.com/daydetail?day=2018-09-03&area=ya [运行时间：1.666645s][吞吐率：0.60req/s] [内存消耗：2,301.13kb] [文件加载：72]
+[ 2018-09-05T13:53:06+08:00 ] 127.0.0.1 GET /daydetail?day=2018-09-04&area=ya
+[ info ] idatamind.com/daydetail?day=2018-09-04&area=ya [运行时间：2.288185s][吞吐率：0.44req/s] [内存消耗：2,301.05kb] [文件加载：72]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'daydetail',
@@ -500,7 +413,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=bckfvrncieb0jk27c21hprum92',
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -510,7 +423,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'ya',
 )
 [ info ] [ SESSION ] INIT array (
@@ -529,16 +442,53 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.013189s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '雅安'  AND `status` = '可用' [ RunTime:0.000429s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001060s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.022044s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '雅安'  AND `status` = '可用' [ RunTime:0.000450s ]
 ---------------------------------------------------------------
-[ 2018-09-04T15:17:33+08:00 ] 127.0.0.1 GET /abc?date=b=2018-09-01,e=2018-09-02&area=cd
-[ info ] idatamind.com/abc?date=b=2018-09-01,e=2018-09-02&area=cd [运行时间：3.420128s][吞吐率：0.29req/s] [内存消耗：2,178.18kb] [文件加载：68]
+[ 2018-09-05T19:59:39+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.206161s][吞吐率：4.85req/s] [内存消耗：1,443.79kb] [文件加载：59]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
-  'rule' => 'abc',
-  'route' => 'admin/Test/abc',
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=onvup81k46vepv3u2h8fuif3k5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-05T19:59:55+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.025312s][吞吐率：39.51req/s] [内存消耗：1,221.94kb] [文件加载：55]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
   'option' => 
   array (
     'merge_rule_regex' => false,
@@ -557,8 +507,167 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'date' => 'b=2018-09-01,e=2018-09-02',
-  'area' => 'cd',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-05T19:59:55+08:00 ] 127.0.0.1 GET /login.html
+[ info ] idatamind.com/login.html [运行时间：0.023371s][吞吐率：42.79req/s] [内存消耗：1,122.43kb] [文件加载：53]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Login/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-05T20:00:10+08:00 ] 127.0.0.1 POST /admin/Login/check
+[ info ] idatamind.com/admin/Login/check [运行时间：0.189233s][吞吐率：5.28req/s] [内存消耗：2,148.10kb] [文件加载：67]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin/login/check',
+  'route' => 'admin/Login/check',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://idatamind.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'rayzxh@163.com',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011047s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.011638s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `email` = 'rayzxh@163.com' LIMIT 1 [ RunTime:0.000511s ]
+---------------------------------------------------------------
+[ 2018-09-05T20:00:10+08:00 ] 127.0.0.1 GET /
+[ info ] idatamind.com/ [运行时间：0.320923s][吞吐率：3.12req/s] [内存消耗：1,443.95kb] [文件加载：59]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'admin/Index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://idatamind.com/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-05T20:00:19+08:00 ] 127.0.0.1 GET /daydetail
+[ info ] idatamind.com/daydetail [运行时间：1.622942s][吞吐率：0.62req/s] [内存消耗：2,306.98kb] [文件加载：72]
+[ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'daydetail',
+  'route' => 'admin/Index/daydetail',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'idatamind.com',
+)
+[ info ] [ PARAM ] array (
 )
 [ info ] [ SESSION ] INIT array (
   'id' => '',
@@ -570,18 +679,18 @@
   'secure' => false,
 )
 [ info ] [ DB ] INIT mysql
-[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\test\abc.html [ array (
+[ info ] [ VIEW ] E:\www\idatamind\application\admin\view\index\daydetail.html [ array (
   0 => 'area',
   1 => 'day',
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010942s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.009520s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000517s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010999s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008524s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000595s ]
 ---------------------------------------------------------------
-[ 2018-09-04T19:18:58+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
-[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：2.688221s][吞吐率：0.37req/s] [内存消耗：2,174.76kb] [文件加载：68]
+[ 2018-09-05T20:00:28+08:00 ] 127.0.0.1 GET /day?day=2018-09-02&area=cd
+[ info ] idatamind.com/day?day=2018-09-02&area=cd [运行时间：2.106216s][吞吐率：0.47req/s] [内存消耗：2,211.56kb] [文件加载：69]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'day',
@@ -595,6 +704,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -623,12 +733,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001268s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.035198s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000524s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008924s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000528s ]
 ---------------------------------------------------------------
-[ 2018-09-04T19:19:27+08:00 ] 127.0.0.1 GET /day?day=2018-09-03&area=cd
-[ info ] idatamind.com/day?day=2018-09-03&area=cd [运行时间：1.882654s][吞吐率：0.53req/s] [内存消耗：2,174.69kb] [文件加载：68]
+[ 2018-09-05T20:00:37+08:00 ] 127.0.0.1 GET /day?day=2018-09-04&area=cd
+[ info ] idatamind.com/day?day=2018-09-04&area=cd [运行时间：2.138123s][吞吐率：0.47req/s] [内存消耗：2,211.41kb] [文件加载：69]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'day',
@@ -642,7 +752,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=hqhgbrc890am9o9krudg24tur4',
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -652,7 +762,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'cd',
 )
 [ info ] [ SESSION ] INIT array (
@@ -671,12 +781,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000836s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.009614s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000471s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010225s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.008636s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '成都'  AND `status` = '可用' [ RunTime:0.000438s ]
 ---------------------------------------------------------------
-[ 2018-09-04T19:20:22+08:00 ] 127.0.0.1 GET /day?day=2018-09-03&area=ya
-[ info ] idatamind.com/day?day=2018-09-03&area=ya [运行时间：1.859424s][吞吐率：0.54req/s] [内存消耗：2,168.24kb] [文件加载：68]
+[ 2018-09-05T20:02:08+08:00 ] 127.0.0.1 GET /day?day=2018-09-04&area=ya
+[ info ] idatamind.com/day?day=2018-09-04&area=ya [运行时间：2.066390s][吞吐率：0.48req/s] [内存消耗：2,205.05kb] [文件加载：69]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'day',
@@ -690,7 +800,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=hqhgbrc890am9o9krudg24tur4',
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -700,7 +810,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'ya',
 )
 [ info ] [ SESSION ] INIT array (
@@ -719,12 +829,12 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010269s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.010350s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '雅安'  AND `status` = '可用' [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010653s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.019318s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '雅安'  AND `status` = '可用' [ RunTime:0.000884s ]
 ---------------------------------------------------------------
-[ 2018-09-04T19:21:00+08:00 ] 127.0.0.1 GET /day?day=2018-09-03&area=ms
-[ info ] idatamind.com/day?day=2018-09-03&area=ms [运行时间：1.875907s][吞吐率：0.53req/s] [内存消耗：2,168.85kb] [文件加载：68]
+[ 2018-09-05T20:02:42+08:00 ] 127.0.0.1 GET /day?day=2018-09-04&area=ms
+[ info ] idatamind.com/day?day=2018-09-04&area=ms [运行时间：2.102137s][吞吐率：0.48req/s] [内存消耗：2,205.65kb] [文件加载：69]
 [ info ] [ LANG ] E:\www\idatamind\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'rule' => 'day',
@@ -738,7 +848,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=hqhgbrc890am9o9krudg24tur4',
+  'cookie' => 'PHPSESSID=32dhl0tpajq2gb28s5q8mcnjj4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -748,7 +858,7 @@
   'host' => 'idatamind.com',
 )
 [ info ] [ PARAM ] array (
-  'day' => '2018-09-03',
+  'day' => '2018-09-04',
   'area' => 'ms',
 )
 [ info ] [ SESSION ] INIT array (
@@ -767,6 +877,6 @@
   2 => 'result',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011289s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.007906s ]
-[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '眉山'  AND `status` = '可用' [ RunTime:0.000430s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010130s ] mysql:host=127.0.0.1;dbname=idatamind;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `channel` [ RunTime:0.011128s ]
+[ sql ] [ SQL ] SELECT `code` FROM `channel` WHERE  `store` = '眉山'  AND `status` = '可用' [ RunTime:0.000637s ]

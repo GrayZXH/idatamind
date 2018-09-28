@@ -6,7 +6,7 @@ use think\facade\Request;
 use think\facade\Session;
 use app\common\model\Channel as modelChannel;
 
-class Index extends Common
+class Index extends Controller
 {
     public function index()
     {
@@ -272,6 +272,8 @@ class Index extends Common
     }
     public function daydetail()
     {
+        $jsessionid=get_cookie();
+        Session::set('jsessionid',$jsessionid);
         $day=Request::get('day',date("Y-m-d"));
         $area=Request::get('area','cd');
         switch ($area) {
