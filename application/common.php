@@ -18,7 +18,7 @@ function get_cookie()
 {	
 	$post = array('online:'=>'pc',
               'account'=>'超级管理员',
-              'password'=>'CDjfr2017');
+              'password'=>'*******');
 	$url = 'http://www.crmak.com/sp/sys/login';
 	// 初始化CURL 
 	$ch = curl_init(); 
